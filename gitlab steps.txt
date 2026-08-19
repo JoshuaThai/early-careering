@@ -1,0 +1,35 @@
+Creating a new repo (for this internship)
+1.) Create a folder whereever you want it
+2.) Open Command Prompt as Admin
+3.) cd <path of folder>
+4.) git init <---- initialized it as a git repo
+5.) git remote add origin <link from clone with HTTPS>
+6.) git branch -M main <-- rename the current local branch to "main"
+7.) git pull origin main <-- bring existing changes in remote repo to local repo
+
+Regular Commit in main branch (Just to know)
+1.) git status <----- check for commits
+2.) git add <file-name>
+3.) git status
+4.) git commit -m "Random Commit Comment"
+5.) git push origin main
+
+-- IMPORTANT FOR INTERNSHIP --
+
+Creating/Merging Another Branch for any project
+1.) Create it in Gitlab by going to plus sign.
+2.) git fetch origin <-----Rescan GitLab for any new updates or branches.
+3.) git checkout your-new-branch-name
+4.) git status <----- check for commits
+5.) git add <file-name>
+6.) git status
+7.) git commit -m "Commit Comment go here"
+8.) git push origin <your-new-branch-name>
+9.) Go to Gitlab to do pull/merge request.
+10.) Remember after the pull request that you will have to create a new branch since it will deleted upon pull request approval.
+11.) Go back to IDE and switch it back to main branch, do git checkout develop.
+12.) Once you are back in main(develop) branch, do "git pull origin main" to retrieve all changes that were merged into the main branch.
+13.) Repeat all above steps for your next feature!
+
+NEAT TRICKS WITH GIT:
+1.) git add . <---- It adds all untracked files safely
