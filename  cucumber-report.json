@@ -1,0 +1,66 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "test-if-user-can-access-the-homepage-at-least;user-can-access-the-homepage",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User can access the homepage",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 182496400
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2354865899
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on the homepage",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:4"
+            }
+          },
+          {
+            "result": {
+              "status": "pending",
+              "duration": 4379800
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the user should see the title \"EarlyCareering\"",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:10"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 75782899
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "test-if-user-can-access-the-homepage-at-least",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Test if User can access the homepage at least",
+    "tags": [],
+    "uri": "src\\features\\home.feature"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "name": "earlycareering",
+  "version": "1.0.0",
+  "description": "EarlyCareering is a job tracker that allows for user to do basic job/internship application tracking and keep track of all the jobs they've applied to.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cucumber-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaThai/early-careering.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JoshuaThai/early-careering/issues"
+  },
+  "homepage": "https://github.com/JoshuaThai/early-careering#readme",
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.2.1",
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
