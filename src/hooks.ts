@@ -5,7 +5,7 @@ import { CustomWorld } from "./world";
 let browser: Browser;
 
 BeforeAll(async function() {
-    browser = await chromium.launch({headless: false});
+    browser = await chromium.launch({headless: true}); // Launch the browser in headless mode
 })
 Before(async function() {
     const context: BrowserContext = await browser.newContext();
