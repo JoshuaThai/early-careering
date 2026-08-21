@@ -12,16 +12,15 @@
           {
             "result": {
               "status": "passed",
-              "duration": 202431800
+              "duration": 93352700
             },
             "keyword": "Before",
             "hidden": true
           },
           {
             "result": {
-              "status": "failed",
-              "duration": 3053758899,
-              "error_message": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/\", waiting until \"load\"\u001b[22m\n\n    at World.<anonymous> (D:\\GitHub\\EarlyCareering\\src\\steps\\home.steps.ts:6:19)"
+              "status": "passed",
+              "duration": 2265528500
             },
             "arguments": [],
             "keyword": "Given ",
@@ -33,8 +32,8 @@
           },
           {
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 41398599
             },
             "arguments": [],
             "keyword": "Then ",
@@ -47,7 +46,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 49037899
+              "duration": 10388500
             },
             "keyword": "After",
             "hidden": true

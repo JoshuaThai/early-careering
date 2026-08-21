@@ -8,6 +8,5 @@ Given('the user is on the homepage', async function () {
 });
 
 Then('the user should see the title {string}', async function (Title: string) {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
+  await expect(this.page.getByRole('heading', { name: Title }).nth(1)).toBeVisible();
 });
