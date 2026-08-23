@@ -1,10 +1,16 @@
 /* This contains the specific styles for the home page */
+/* .page{
+    display: flex;
+} */
+
 /* HEADER STYLES */
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 10px;
     /* border: 1px solid var(--foreground); */
 }
 
@@ -22,6 +28,14 @@
     font-size: 22px;
     font-weight: 300;
     color: var(--foreground);
+    &::after{
+        content: "";
+        display: block;
+        width: 0;
+        height: 3px;
+        background-color: var(--foreground);
+        transition: width 0.3s;
+    }
     &:hover::after{
         content: "";
         display: block;
@@ -66,10 +80,12 @@
 .menuButton{
     display: none;
     border: 2px solid white;
-    background-color: transparent;
+    background-color: var(--foreground);
+    color: black;
+    transition: all 0.2s ease-in-out;
     &:hover{
-        background-color: var(--foreground);
-        color: black;
+        color: white;
+        background-color: transparent;
         cursor: pointer;
     }
 }
@@ -90,17 +106,16 @@
         width: 3em;
         font-size: 1em;
     }
-    .logo{
+    /* .logo{
         font-size: 28px;
-    }
+    } */
 }
 
 /* PAGE TITLE STYLES */
 .title{
     /* border: 1px solid var(--foreground); */
     height: 16em;
-    margin-top: 10px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url("./images/WorkerWorking.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url("/images/WorkerWorking.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -114,6 +129,7 @@
 
     font-size: 2em;
     color: var(--foreground);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.75);
 }
 
 .subtitle{
@@ -121,6 +137,24 @@
     font-weight: 300;
     color: var(--foreground);
     margin-top: 10px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.75);
+}
+
+.startNowButton{
+    font-size: 1.2em;
+    font-weight: 600;
+    color: black;
+    background-color: var(--foreground);
+    border: 3px solid var(--foreground);
+    transition: all 0.2s ease-in-out;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    &:hover{
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 1100px){
@@ -131,4 +165,130 @@
     .subtitle{
         font-size: 1em;
     }
+}
+
+/* PRODUCT EXPLANATION STYLES */
+
+.productExplanationContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.productExplanation{
+    /* border: 1px solid var(--foreground); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, 0.25); */
+    width: 100%;
+}
+
+.productExplanationText{
+    font-size: 1.2em;
+    text-wrap: pretty;
+    font-weight: 300;
+    color: var(--foreground);
+    margin-top: 10px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.75);
+}
+
+.productExplanationImage{
+    border: 1px solid var(--foreground);
+    width: 80%;
+    height: auto;
+    margin-right: 20px;
+    /* margin-top: 20px; */
+    border-radius: 10px;
+}
+
+@media (max-width: 568px){
+    .productExplanationImage{
+        margin-left: 20px;
+        width: 25em;
+        height: 10em;
+    }
+}
+
+@media (max-width: 1050px){
+    .productExplanationContainer{
+        flex-direction: column;
+    }
+    .productExplanation{
+        width: 100%;
+    }
+}
+
+/* MODAL STYLES */
+
+/* The overlay (background) */
+.modalOverlay {
+  /* display: none; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* The modal box */
+.modalBox {
+  background: rgba(255, 255, 255, 0.9);
+  width: 75%;
+  /* max-width: 400px; */
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* The content of the modal */
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.2em;
+  color: black;
+  text-align: center;
+  margin-top: 1.2em;
+}
+
+/* Modal Image Styles */
+.productExplanationImageModal{
+    width: 100%;
+}
+
+/* Modal Close button */
+.modalCloseButton {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 28px;
+  color: black;
+  border: none;
+  background: none;
+  cursor: pointer;
+  &:hover {
+    color: red;
+  }
+}
+
+/* QUOTE STYLES */
+.quote{
+    /* border: 1px solid var(--foreground); */
+    margin: 10px 0;
+}
+
+.quoteText{
+    font-size: 1.8em;
+    font-style: italic;
+}
+
+.quoteAuthor{
+    font-size: 1.6em;
+    font-weight: 300;
 }
