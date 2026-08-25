@@ -3,7 +3,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faClipboard, 
+    IconDefinition, faMagnifyingGlassChart, faFileExport } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 
@@ -45,11 +46,58 @@ function Quote({ quote, author }: { quote: string; author: string }) {
     )
 }
 
+function FeatureBox({ title, description, 
+    imageName, backgroundColor, iconColor}: { title: string; description: string; 
+        imageName: IconDefinition; backgroundColor: string; iconColor: string }) {
+    return (
+        <div className={styles.featureBox} style={{ backgroundColor }}>
+            <div className={styles.featureBoxContent}>
+                <h3>{title}</h3>
+                <FontAwesomeIcon icon={imageName} 
+                className={styles.featureImage} size="2x" style={{ color: iconColor }} />
+                {/* <img src={imageSrc} alt={title} className={styles.featureImage} /> */}
+                <p>{description}</p>
+            </div>
+        </div>
+ )
+};
+
 function Features(){
     return (
         <div className={styles.feature}>
-            <h3>Core Features</h3>
-            <p>Description of Feature 1</p>
+            <h2>Core Features</h2>
+            <div className={styles.featureBoxesContainer}>
+                <FeatureBox 
+                    title="Track Job Applications" 
+
+                    description="Manually add jobs to the 
+                    job tracker with their description, 
+                    organize the jobs by most desired roles, 
+                    track the application’s status and more! "
+
+                    imageName={faClipboard} 
+                    backgroundColor="rgba(39, 79, 159, 1)" 
+                    iconColor="orange" />
+                    <FeatureBox 
+                    title="Analyze Job Search using AI" 
+                    
+                    description="Let our AI analyze all of your tracked jobs to offer guidance on optimizing your job search. Also, leverage our AI to optimize your interview preparation for specific roles! "
+
+                    imageName={faMagnifyingGlassChart} 
+                    backgroundColor="rgba(26, 45, 82, 1)" 
+                    iconColor="lightblue" />
+                    <FeatureBox 
+                    title="Export Job Search Data" 
+                    
+                    description="Want to use our systems only for tracking? 
+                    No problem! Our application also allows for you to export your data in 
+                    many formats such as .csv, .xlsx, and more! "
+
+                    imageName={faFileExport} 
+                    backgroundColor="rgba(0, 50, 149, 1)" 
+                    iconColor="white" />
+            </div>
+            <button className={styles.viewAllFeatures}>View all Features Here &rarr;</button>
         </div>
     )
 }
@@ -108,5 +156,6 @@ export default function Home() {
       <Title title="EarlyCareering" 
       subtitle="Your career starts here! Track your job search progress and achieve your goals." />
       <ProductExplanation />
+      <Features />
     </div>
 )};
