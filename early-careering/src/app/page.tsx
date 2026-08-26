@@ -8,6 +8,15 @@ import { faBars, faClipboard,
 import { useState } from "react";
 
 
+function CallToAction(){
+    return(
+        <div className={styles.callToAction}>
+            <h2>Ready to take control of your job search? Try out EarlyCareering yourself!</h2>
+            <button className={styles.tryNowButton}>Try it now! &rarr;</button>
+        </div>
+    )
+};
+
 function Modal({ modalOpen, setModalOpen }: 
     { modalOpen: boolean; 
         setModalOpen: (open: boolean) => void }) {
@@ -70,10 +79,11 @@ function Features(){
                 <FeatureBox 
                     title="Track Job Applications" 
 
-                    description="Manually add jobs to the 
-                    job tracker with their description, 
-                    organize the jobs by most desired roles, 
-                    track the application’s status and more! "
+                    description={"Manually add jobs to the " + 
+                    "job tracker with their description," +
+                    " organize the jobs by most desired roles, " +
+                    "track the application's status and more!"
+                    }
 
                     imageName={faClipboard} 
                     backgroundColor="rgba(39, 79, 159, 1)" 
@@ -89,9 +99,10 @@ function Features(){
                     <FeatureBox 
                     title="Export Job Search Data" 
                     
-                    description="Want to use our systems only for tracking? 
-                    No problem! Our application also allows for you to export your data in 
-                    many formats such as .csv, .xlsx, and more! "
+                    description={"Want to use our systems only for tracking?" + 
+                    " No problem! Our application also allows for you to export your data in " + 
+                    "many formats such as .csv, .xlsx, and more! "
+                    }
 
                     imageName={faFileExport} 
                     backgroundColor="rgba(0, 50, 149, 1)" 
@@ -157,5 +168,6 @@ export default function Home() {
       subtitle="Your career starts here! Track your job search progress and achieve your goals." />
       <ProductExplanation />
       <Features />
+      <CallToAction />
     </div>
 )};
