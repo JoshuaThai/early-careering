@@ -44,6 +44,12 @@ a {
   text-decoration: none;
 }
 
+footer{
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+}
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

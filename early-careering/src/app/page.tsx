@@ -8,12 +8,30 @@ import { faBars, faClipboard,
 import { useState } from "react";
 
 
+function Footer(){
+    const currentYear = new Date().getFullYear();
+    return(
+        <section className={styles.footer}>
+            <div className={styles.footerLogoContainer}>
+                <h1 className={styles.logo}><a href="/">EarlyCareering</a></h1>
+                <nav className={styles.footerNav}>
+                    <a href="/">Home</a>
+                    <a href="/somePage">Features</a>
+                    <a href="/somePage">About</a>
+                    <a href="/somePage">Contact</a>
+                </nav>
+            </div>
+            <footer>&copy; {currentYear} EarlyCareering. All rights reserved.</footer>
+        </section>
+    )
+}
+
 function CallToAction(){
     return(
-        <div className={styles.callToAction}>
+        <section className={styles.callToAction}>
             <h2>Ready to take control of your job search? Try out EarlyCareering yourself!</h2>
             <button className={styles.tryNowButton}>Try it now! &rarr;</button>
-        </div>
+        </section>
     )
 };
 
@@ -37,11 +55,11 @@ function Modal({ modalOpen, setModalOpen }:
 
 function Title({ title, subtitle }: { title: string; subtitle: string }) {
     return (
-        <div className={styles.title}>
+        <section className={styles.title}>
             <h1 className={styles.titleText}>{title}</h1>
             <p className={styles.subtitle}>{subtitle}</p>
             <button className={styles.startNowButton}>Ready? Start Now!</button>
-        </div>
+        </section>
     )
 };
 
@@ -73,7 +91,7 @@ function FeatureBox({ title, description,
 
 function Features(){
     return (
-        <div className={styles.feature}>
+        <section className={styles.feature}>
             <h2>Core Features</h2>
             <div className={styles.featureBoxesContainer}>
                 <FeatureBox 
@@ -109,16 +127,16 @@ function Features(){
                     iconColor="white" />
             </div>
             <button className={styles.viewAllFeatures}>View all Features Here &rarr;</button>
-        </div>
+        </section>
     )
 }
 
 function ProductExplanation(){
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    console.log("isModalOpen:", isModalOpen);
+    // console.log("isModalOpen:", isModalOpen);
     return (
-        <div className={styles.productExplanationContainer}>
+        <section className={styles.productExplanationContainer}>
             < Modal modalOpen={isModalOpen} setModalOpen={setIsModalOpen} />
             <div className={styles.productExplanation}>
                 <h2 style={{ fontSize: '2.4em', margin: '10px 0' }}>What on Earth is EarlyCareering?</h2>
@@ -136,13 +154,13 @@ function ProductExplanation(){
                 <Quote quote="I have no idea what I need to do next." author="Anonymous"/>
                 <Quote quote="I have no idea what my goals are." author="Anonymous"/>
             </div>
-        </div>
+        </section>
     )
 };
 
 function Header(){
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <h1 className={styles.logo}><a href="/">EarlyCareering</a></h1>
             <div className={styles.navContainer}>
                 <button className={styles.menuButton} aria-label="Menu">
@@ -155,9 +173,9 @@ function Header(){
                     <a href="/somePage">Features</a>
                     <a href="/somePage">About</a>
                 </nav>
-                <button className={styles.loginButton}>Login/ Sign Up</button>
+                <a href="/login" className={styles.loginButton}>Login/ Sign Up</a>
             </div>
-        </div>
+        </header>
 )};
 
 export default function Home() {
@@ -169,5 +187,6 @@ export default function Home() {
       <ProductExplanation />
       <Features />
       <CallToAction />
+      <Footer />
     </div>
 )};
