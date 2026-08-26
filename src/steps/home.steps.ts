@@ -1,5 +1,15 @@
-import {Given, When, Then} from "@cucumber/cucumber";
+import {Given, When, Then, Before, BeforeAll} from "@cucumber/cucumber";
 import {expect} from "@playwright/test";
+import HomePage from "../pages/HomePage";
+import {CustomWorld} from "../world";
+
+let homePage: HomePage;
+
+Before(async function() {
+  // This hook runs before all scenarios
+  // You can perform setup tasks here, such as launching a browser or initializing test data
+  homePage = new HomePage(this.page);
+});
 
 Given('the user is on the homepage', async function () {
   // Write code here that turns the phrase above into concrete actions
@@ -8,5 +18,7 @@ Given('the user is on the homepage', async function () {
 });
 
 Then('the user should see the title {string}', async function (Title: string) {
-  await expect(this.page.getByRole('heading', { name: Title }).nth(1)).toBeVisible();
+  // console.log(await homePage.elements.title.textContent());
+  await expect(homePage.elements.title).toBeVisible();
+  await expect(homePage.elements.title).toHaveText(Title);
 });

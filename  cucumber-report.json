@@ -12,7 +12,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 93352700
+              "duration": 203925500
             },
             "keyword": "Before",
             "hidden": true
@@ -20,33 +20,41 @@
           {
             "result": {
               "status": "passed",
-              "duration": 2265528500
+              "duration": 314400
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2423784599
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 4,
             "name": "the user is on the homepage",
             "match": {
-              "location": "src\\steps\\home.steps.ts:4"
+              "location": "src\\steps\\home.steps.ts:14"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 41398599
+              "duration": 45323500
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 5,
             "name": "the user should see the title \"EarlyCareering\"",
             "match": {
-              "location": "src\\steps\\home.steps.ts:10"
+              "location": "src\\steps\\home.steps.ts:20"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 10388500
+              "duration": 60057899
             },
             "keyword": "After",
             "hidden": true
