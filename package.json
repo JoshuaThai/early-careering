@@ -4,7 +4,8 @@
   "description": "EarlyCareering is a job tracker that allows for user to do basic job/internship application tracking and keep track of all the jobs they've applied to.",
   "main": "index.js",
   "scripts": {
-    "test": "npx cucumber-js"
+    "test": "npx cucumber-js",
+    "smoke-test": "npx cucumber-js --tags @smoke"
   },
   "repository": {
     "type": "git",

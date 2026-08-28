@@ -1,0 +1,130 @@
+
+.loginSection{
+    /* border: 1px solid #ccc; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 2em;
+}
+
+.loginBox{
+    width: 30%;
+    height: 100%;
+    font-size: 30px;
+    background-color: #F7F7F7;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border-radius: 16px;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    /* border: 1px solid black; */
+}
+
+@media (max-width: 1090px) {
+    .loginBox {
+        width: 40%;
+        height: 80%;
+    }
+}
+
+@media (max-width: 868px) {
+    .loginBox {
+        width: 60%;
+        height: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .loginBox {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.signUpSwitch{
+    background-color: #D9D9D9;
+    border-radius: 10px;
+}
+
+.signUpSwitch button{
+    background-color: #D9D9D9;
+    color: black;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    &:hover{
+        background-color: black;
+        color: white;
+    }
+}
+
+.formGroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* border: 1px solid #ccc; */
+}
+
+.formGroup label{
+    font-size: 24px;
+    margin-bottom: -15px;
+    &::after{
+        content: " *";
+        color: red;
+    }
+}
+
+.formFields{
+    line-height: 2;
+    vertical-align: text-bottom;
+    /* text-align: match-parent; */
+    font-size: 24px;
+    background-color: #D9D9D9;
+    color: black;
+    border: none;
+    border-bottom: 1px solid black;
+    height: 50px;
+    &:focus{
+        outline: none;
+        border-bottom: 2px solid red;
+    }
+}
+
+.submitButton{
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    border: 1px solid #0070f3;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+        background-color: #0070f3;
+        color: white;
+    }
+}
