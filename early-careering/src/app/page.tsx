@@ -6,25 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClipboard, 
     IconDefinition, faMagnifyingGlassChart, faFileExport } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { Footer } from "./components/main";
 
-
-function Footer(){
-    const currentYear = new Date().getFullYear();
-    return(
-        <section className={styles.footer}>
-            <div className={styles.footerLogoContainer}>
-                <h1 className={styles.logo}><a href="/">EarlyCareering</a></h1>
-                <nav className={styles.footerNav}>
-                    <a href="/">Home</a>
-                    <a href="/somePage">Features</a>
-                    <a href="/somePage">About</a>
-                    <a href="/somePage">Contact</a>
-                </nav>
-            </div>
-            <footer>&copy; {currentYear} EarlyCareering. All rights reserved.</footer>
-        </section>
-    )
-}
 
 function CallToAction(){
     return(

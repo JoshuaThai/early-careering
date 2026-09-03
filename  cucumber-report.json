@@ -4,85 +4,6 @@
     "elements": [
       {
         "description": "",
-        "id": "test-if-the-user-can-access-the-homepage-and-that-you-can-access-the-other-pages-from-it.;user-can-access-the-homepage",
-        "keyword": "Scenario",
-        "line": 4,
-        "name": "User can access the homepage",
-        "steps": [
-          {
-            "result": {
-              "status": "passed",
-              "duration": 149114800
-            },
-            "keyword": "Before",
-            "hidden": true
-          },
-          {
-            "result": {
-              "status": "passed",
-              "duration": 322299
-            },
-            "keyword": "Before",
-            "hidden": true
-          },
-          {
-            "result": {
-              "status": "passed",
-              "duration": 2334951700
-            },
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 5,
-            "name": "the user is on the homepage",
-            "match": {
-              "location": "src\\steps\\home.steps.ts:18"
-            }
-          },
-          {
-            "result": {
-              "status": "passed",
-              "duration": 43028600
-            },
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 6,
-            "name": "the user should see the title \"EarlyCareering\"",
-            "match": {
-              "location": "src\\steps\\home.steps.ts:24"
-            }
-          },
-          {
-            "result": {
-              "status": "passed",
-              "duration": 26588700
-            },
-            "arguments": [],
-            "keyword": "And ",
-            "line": 7,
-            "name": "the user should see all of the section headings and the header",
-            "match": {
-              "location": "src\\steps\\home.steps.ts:30"
-            }
-          },
-          {
-            "result": {
-              "status": "passed",
-              "duration": 23118099
-            },
-            "keyword": "After",
-            "hidden": true
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke",
-            "line": 3
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
         "id": "test-if-the-user-can-access-the-homepage-and-that-you-can-access-the-other-pages-from-it.;check-if-home-link-in-nav-bar-navigates-to-home",
         "keyword": "Scenario",
         "line": 10,
@@ -91,7 +12,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 152287600
+              "duration": 259641299
             },
             "keyword": "Before",
             "hidden": true
@@ -99,7 +20,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 404499
+              "duration": 161800
             },
             "keyword": "Before",
             "hidden": true
@@ -107,7 +28,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 2329505300
+              "duration": 2647538799
             },
             "arguments": [],
             "keyword": "Given ",
@@ -120,7 +41,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 159127700
+              "duration": 224016599
             },
             "arguments": [],
             "keyword": "When ",
@@ -133,7 +54,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 65328700
+              "duration": 52168900
             },
             "arguments": [],
             "keyword": "Then ",
@@ -146,7 +67,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 34391400
+              "duration": 14605700
             },
             "keyword": "After",
             "hidden": true
@@ -162,6 +83,85 @@
       },
       {
         "description": "",
+        "id": "test-if-the-user-can-access-the-homepage-and-that-you-can-access-the-other-pages-from-it.;user-can-access-the-homepage",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "User can access the homepage",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 259579400
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 159499
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2647559099
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user is on the homepage",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:18"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 82376199
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the user should see the title \"EarlyCareering\"",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:24"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 46430799
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the user should see all of the section headings and the header",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:30"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 22520700
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
         "id": "test-if-the-user-can-access-the-homepage-and-that-you-can-access-the-other-pages-from-it.;check-if-clicking-logo-navigates-to-home",
         "keyword": "Scenario",
         "line": 16,
@@ -170,7 +170,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 139129500
+              "duration": 62239499
             },
             "keyword": "Before",
             "hidden": true
@@ -178,7 +178,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 94700
+              "duration": 320599
             },
             "keyword": "Before",
             "hidden": true
@@ -186,7 +186,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 2294204900
+              "duration": 2324148600
             },
             "arguments": [],
             "keyword": "Given ",
@@ -199,7 +199,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 161499499
+              "duration": 99626499
             },
             "arguments": [],
             "keyword": "When ",
@@ -212,7 +212,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 58632999
+              "duration": 62618200
             },
             "arguments": [],
             "keyword": "Then ",
@@ -225,7 +225,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 35684199
+              "duration": 8577900
             },
             "keyword": "After",
             "hidden": true
@@ -249,7 +249,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 153502699
+              "duration": 94712599
             },
             "keyword": "Before",
             "hidden": true
@@ -257,7 +257,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 129600
+              "duration": 343700
             },
             "keyword": "Before",
             "hidden": true
@@ -265,7 +265,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 2304950000
+              "duration": 2280722399
             },
             "arguments": [],
             "keyword": "Given ",
@@ -278,7 +278,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 139429900
+              "duration": 168531100
             },
             "arguments": [],
             "keyword": "When ",
@@ -291,7 +291,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 59857899
+              "duration": 44820500
             },
             "arguments": [],
             "keyword": "Then ",
@@ -304,7 +304,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 34360899
+              "duration": 8704900
             },
             "keyword": "After",
             "hidden": true
