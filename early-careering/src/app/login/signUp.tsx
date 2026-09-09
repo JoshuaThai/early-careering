@@ -69,7 +69,7 @@ export function SignUpBox(){
     
     return (
         <div>
-            <h2>Sign Up</h2>
+            <h2 style={{ textAlign: 'center' }}>Sign Up</h2>
             <br />
             <form className={loginStyles.loginForm} method="POST" onSubmit={handleSignUp}>
                 <div className={loginStyles.formGroup}>
@@ -102,7 +102,7 @@ export function SignUpBox(){
                     >{confirmPassword ? '✔ The passwords match' : '✖ The passwords must match'} </p>
                 </div>
                 <br />
-                <div className={loginStyles.formGroup}>
+                <div className={`${loginStyles.formGroup} ${loginStyles.fieldSeperator}`}>
                     <label htmlFor="first-name">First Name</label><br />
                     <input type="text" id="first-name" name="first-name" 
                     className={loginStyles.formFields} required />
@@ -112,6 +112,38 @@ export function SignUpBox(){
                     <label htmlFor="phone-number">Phone Number</label><br />
                     <input type="text" id="phone-number" name="phone-number" 
                     className={loginStyles.formFields} required />
+                </div>
+                <br />
+                <div className={loginStyles.careerJourneyQuestion}>
+                    <label htmlFor="career-journey" id={loginStyles.careerJourney}>Where are you in your career journey?</label><br />
+                    <input type="radio" id="student" name="career-journey" value="student" required />
+                    <label htmlFor="student">Early Career/Student or Entry Level</label><br />
+                    <input type="radio" id="mid-career" name="career-journey" value="mid-career" required />
+                    <label htmlFor="mid-career">Mid-Career or Mid-Level</label><br />
+                    <input type="radio" id="later-career" name="career-journey" value="later-career" required />
+                    <label htmlFor="later-career">Late-Career or Senior-Level</label>
+                </div>
+                <br />
+                <div className={loginStyles.industryQuestion}>
+                    <label htmlFor="industry">What industry are you working on planning to work for?</label><br />
+                    <select id="industry" name="industry" className={loginStyles.formFields} required>
+                        <option value="">Select an industry</option>
+                        <option value="technology">Technology</option>
+                        <option value="finance">Finance</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="education">Education</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <br />
+                <div className={loginStyles.formGroup}>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div className={loginStyles.termsCheckbox}>
+                            <input type="checkbox" id="terms" name="terms" required />
+                            <label htmlFor="terms">By checking this box, you agree to the&nbsp; 
+                                <a href="/terms" target="_blank">Terms and Conditions</a>.</label>  
+                        </div>
+                    </div>
                 </div>
                 <br />
                 <button type="submit" className={loginStyles.submitButton}>Sign Up</button>

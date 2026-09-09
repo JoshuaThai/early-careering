@@ -94,6 +94,8 @@
 .formGroup label{
     font-size: 24px;
     margin-bottom: -15px;
+    text-align: center;
+    text-wrap: pretty;
     &::after{
         content: " *";
         color: red;
@@ -117,11 +119,99 @@
     }
 }
 
+.fieldSeperator{
+    border-top: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
 /* Password validation styles */
 .passwordValidation {
     font-size: 20px;
     color: red;
     margin-top: 10px;
+}
+
+/* Career journey question styles */
+.careerJourneyQuestion {
+    border-top: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.careerJourneyQuestion label{
+    font-size: 24px;
+    margin-bottom: -15px;
+    text-align: center;
+    text-wrap: pretty;
+    &::before{
+        content: " ";
+    }
+}
+
+@media (max-width: 760px) {
+    .careerJourneyQuestion label{
+        font-size: 20px;
+    }
+
+    .industryQuestion label{
+        font-size: 20px;
+    }
+}
+
+
+.careerJourneyQuestion label:nth-child(1){
+    &::after{
+        content: " *";
+        color: red;
+    }
+}
+
+.industryQuestion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.industryQuestion label{
+    font-size: 24px;
+    margin-bottom: -15px;
+    text-align: center;
+    text-wrap: pretty;
+    &::before{
+        content: " ";
+    }
+}
+
+.industryQuestion label:nth-child(1){
+    &::after{
+        content: " *";
+        color: red;
+    }
+}
+
+/* Terms and Conditions styles */
+.termsCheckbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+}
+
+.termsCheckbox input[type="checkbox"]{
+    margin-right: 10px;
+    height: 48px;
+    width: 48px;
+}
+
+.termsCheckbox label a{
+    color: #0492CB;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 .submitButton{

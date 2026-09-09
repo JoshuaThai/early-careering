@@ -1,0 +1,39 @@
+
+.termsMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.termsContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-radius: 16px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    color: black;
+}
+
+@media (max-width: 760px) {
+    .termsContent {
+        width: 80%;
+    }
+}
+
+.termsContent p{
+    font-size: 20px;
+    text-wrap: pretty;
+}
+
+.termsContentContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
