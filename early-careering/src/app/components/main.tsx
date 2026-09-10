@@ -4,6 +4,10 @@
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
 import styles from "../page.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {LoginButton} from "./loginProfile";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
 export function Footer(){
     const currentYear = new Date().getFullYear();
@@ -23,7 +27,16 @@ export function Footer(){
     )
 }
 
-export function Header(){
+export async function Header(){
+    // var showLogin = true;
+    const session = await auth.api.getSession({
+        headers: await headers(),
+    });
+
+    // if (session) {
+    //     showLogin = false;
+    //     console.log(showLogin);
+    // }
     return (
         <header className={styles.header}>
             <h1 className={styles.logo}><a href="/">EarlyCareering</a></h1>
@@ -38,7 +51,7 @@ export function Header(){
                     <a href="/somePage">Features</a>
                     <a href="/somePage">About</a>
                 </nav>
-                <a href="/login" className={styles.loginButton}>Login/ Sign Up</a>
+            <LoginButton showLogin={!session} />
             </div>
         </header>
 )};

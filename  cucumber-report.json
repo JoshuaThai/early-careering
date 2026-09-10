@@ -1,97 +1,18 @@
 [
   {
-    "description": "",
+    "description": "Description: Test if the user can access the homepage and that you can access the other pages \nfrom it.",
     "elements": [
       {
         "description": "",
-        "id": "test-if-the-user-can-access-the-homepage-and-that-you-can-access-the-other-pages-from-it.;check-if-home-link-in-nav-bar-navigates-to-home",
+        "id": "homepage-tests;user-can-access-the-homepage",
         "keyword": "Scenario",
-        "line": 10,
-        "name": "Check if Home Link in nav bar navigates to home",
-        "steps": [
-          {
-            "result": {
-              "status": "passed",
-              "duration": 259641299
-            },
-            "keyword": "Before",
-            "hidden": true
-          },
-          {
-            "result": {
-              "status": "passed",
-              "duration": 161800
-            },
-            "keyword": "Before",
-            "hidden": true
-          },
-          {
-            "result": {
-              "status": "passed",
-              "duration": 2647538799
-            },
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 11,
-            "name": "the user is on the homepage",
-            "match": {
-              "location": "src\\steps\\home.steps.ts:18"
-            }
-          },
-          {
-            "result": {
-              "status": "passed",
-              "duration": 224016599
-            },
-            "arguments": [],
-            "keyword": "When ",
-            "line": 12,
-            "name": "the users click on the Home link in nav bar",
-            "match": {
-              "location": "src\\steps\\home.steps.ts:43"
-            }
-          },
-          {
-            "result": {
-              "status": "passed",
-              "duration": 52168900
-            },
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 13,
-            "name": "the user verifies that the user is still on the homepage",
-            "match": {
-              "location": "src\\steps\\home.steps.ts:48"
-            }
-          },
-          {
-            "result": {
-              "status": "passed",
-              "duration": 14605700
-            },
-            "keyword": "After",
-            "hidden": true
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke",
-            "line": 9
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "test-if-the-user-can-access-the-homepage-and-that-you-can-access-the-other-pages-from-it.;user-can-access-the-homepage",
-        "keyword": "Scenario",
-        "line": 4,
+        "line": 6,
         "name": "User can access the homepage",
         "steps": [
           {
             "result": {
               "status": "passed",
-              "duration": 259579400
+              "duration": 88251699
             },
             "keyword": "Before",
             "hidden": true
@@ -99,7 +20,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 159499
+              "duration": 262900
             },
             "keyword": "Before",
             "hidden": true
@@ -107,11 +28,19 @@
           {
             "result": {
               "status": "passed",
-              "duration": 2647559099
+              "duration": 186099
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2330422000
             },
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
+            "line": 7,
             "name": "the user is on the homepage",
             "match": {
               "location": "src\\steps\\home.steps.ts:18"
@@ -120,11 +49,11 @@
           {
             "result": {
               "status": "passed",
-              "duration": 82376199
+              "duration": 54777299
             },
             "arguments": [],
             "keyword": "Then ",
-            "line": 6,
+            "line": 8,
             "name": "the user should see the title \"EarlyCareering\"",
             "match": {
               "location": "src\\steps\\home.steps.ts:24"
@@ -133,11 +62,11 @@
           {
             "result": {
               "status": "passed",
-              "duration": 46430799
+              "duration": 33801600
             },
             "arguments": [],
             "keyword": "And ",
-            "line": 7,
+            "line": 9,
             "name": "the user should see all of the section headings and the header",
             "match": {
               "location": "src\\steps\\home.steps.ts:30"
@@ -146,7 +75,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 22520700
+              "duration": 7149400
             },
             "keyword": "After",
             "hidden": true
@@ -155,22 +84,22 @@
         "tags": [
           {
             "name": "@smoke",
-            "line": 3
+            "line": 5
           }
         ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "test-if-the-user-can-access-the-homepage-and-that-you-can-access-the-other-pages-from-it.;check-if-clicking-logo-navigates-to-home",
+        "id": "homepage-tests;check-if-home-link-in-nav-bar-navigates-to-home",
         "keyword": "Scenario",
-        "line": 16,
-        "name": "Check if clicking logo navigates to home",
+        "line": 12,
+        "name": "Check if Home Link in nav bar navigates to home",
         "steps": [
           {
             "result": {
               "status": "passed",
-              "duration": 62239499
+              "duration": 91908199
             },
             "keyword": "Before",
             "hidden": true
@@ -178,7 +107,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 320599
+              "duration": 267200
             },
             "keyword": "Before",
             "hidden": true
@@ -186,11 +115,19 @@
           {
             "result": {
               "status": "passed",
-              "duration": 2324148600
+              "duration": 274400
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2344498400
             },
             "arguments": [],
             "keyword": "Given ",
-            "line": 17,
+            "line": 13,
             "name": "the user is on the homepage",
             "match": {
               "location": "src\\steps\\home.steps.ts:18"
@@ -199,24 +136,24 @@
           {
             "result": {
               "status": "passed",
-              "duration": 99626499
+              "duration": 130567699
             },
             "arguments": [],
             "keyword": "When ",
-            "line": 18,
-            "name": "the user click on the logo in the header",
+            "line": 14,
+            "name": "the users click on the Home link in nav bar",
             "match": {
-              "location": "src\\steps\\home.steps.ts:54"
+              "location": "src\\steps\\home.steps.ts:43"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 62618200
+              "duration": 54947600
             },
             "arguments": [],
             "keyword": "Then ",
-            "line": 19,
+            "line": 15,
             "name": "the user verifies that the user is still on the homepage",
             "match": {
               "location": "src\\steps\\home.steps.ts:48"
@@ -225,7 +162,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 8577900
+              "duration": 10829700
             },
             "keyword": "After",
             "hidden": true
@@ -234,22 +171,22 @@
         "tags": [
           {
             "name": "@smoke",
-            "line": 15
+            "line": 11
           }
         ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "test-if-the-user-can-access-the-homepage-and-that-you-can-access-the-other-pages-from-it.;check-if-user-can-navigate-to-login/signup-page",
+        "id": "homepage-tests;check-if-clicking-logo-navigates-to-home",
         "keyword": "Scenario",
-        "line": 22,
-        "name": "Check if user can navigate to login/signup page",
+        "line": 18,
+        "name": "Check if clicking logo navigates to home",
         "steps": [
           {
             "result": {
               "status": "passed",
-              "duration": 94712599
+              "duration": 56549899
             },
             "keyword": "Before",
             "hidden": true
@@ -257,7 +194,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 343700
+              "duration": 211900
             },
             "keyword": "Before",
             "hidden": true
@@ -265,11 +202,19 @@
           {
             "result": {
               "status": "passed",
-              "duration": 2280722399
+              "duration": 197000
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2329545699
             },
             "arguments": [],
             "keyword": "Given ",
-            "line": 23,
+            "line": 19,
             "name": "the user is on the homepage",
             "match": {
               "location": "src\\steps\\home.steps.ts:18"
@@ -278,33 +223,33 @@
           {
             "result": {
               "status": "passed",
-              "duration": 168531100
+              "duration": 119672700
             },
             "arguments": [],
             "keyword": "When ",
-            "line": 24,
-            "name": "the users click on the Login-Sign Up button",
+            "line": 20,
+            "name": "the user click on the logo in the header",
             "match": {
-              "location": "src\\steps\\home.steps.ts:60"
+              "location": "src\\steps\\home.steps.ts:54"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 44820500
+              "duration": 25084699
             },
             "arguments": [],
             "keyword": "Then ",
-            "line": 25,
-            "name": "the user verifies that they end up on the login page",
+            "line": 21,
+            "name": "the user verifies that the user is still on the homepage",
             "match": {
-              "location": "src\\steps\\home.steps.ts:65"
+              "location": "src\\steps\\home.steps.ts:48"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 8704900
+              "duration": 5547199
             },
             "keyword": "After",
             "hidden": true
@@ -313,17 +258,315 @@
         "tags": [
           {
             "name": "@smoke",
-            "line": 21
+            "line": 17
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "homepage-tests;check-if-user-can-navigate-to-login/signup-page",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Check if user can navigate to login/signup page",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 64172700
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 197400
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 211299
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2266255600
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 25,
+            "name": "the user is on the homepage",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:18"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 126351400
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "the users click on the Login-Sign Up button",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:60"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 57040699
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "the user verifies that they end up on the login page",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:65"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 8102399
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 23
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "test-if-the-user-can-access-the-homepage-and-that-you-can-access-the-other-pages-from-it.",
+    "id": "homepage-tests",
     "line": 1,
     "keyword": "Feature",
-    "name": "Test if the user can access the homepage and that you can access the other pages from it.",
+    "name": "Homepage Tests",
     "tags": [],
     "uri": "src\\features\\home.feature"
+  },
+  {
+    "description": "Description: Test if the signup page works correctly.",
+    "elements": [
+      {
+        "description": "",
+        "id": "signup-page-tests;check-if-login-page-is-accessible",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Check if login page is accessible",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 62970499
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 130000
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 42999
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 266123800
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "the user navigates to the login page",
+            "match": {
+              "location": "src\\steps\\signup.steps.ts:15"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 42947099
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the user should see a login heading",
+            "match": {
+              "location": "src\\steps\\signup.steps.ts:19"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 13641599
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the user should see a login switch button",
+            "match": {
+              "location": "src\\steps\\signup.steps.ts:23"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 4646300
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user should see a signup switch button",
+            "match": {
+              "location": "src\\steps\\signup.steps.ts:27"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 11001500
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 4
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "signup-page-tests;check-if-login-page-is-accessible",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Check if login page is accessible",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 57320100
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 83300
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 48899
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 204298399
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "the user navigates to the login page",
+            "match": {
+              "location": "src\\steps\\signup.steps.ts:15"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 116145699
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "the user clicks the sign up switch",
+            "match": {
+              "location": "src\\steps\\signup.steps.ts:31"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 5767200
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the user should see a sign up heading",
+            "match": {
+              "location": "src\\steps\\signup.steps.ts:35"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 29638799
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "the user should see all required fields",
+            "match": {
+              "location": "src\\steps\\signup.steps.ts:39"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 5105499
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "signup-page-tests",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Signup Page Tests",
+    "tags": [],
+    "uri": "src\\features\\signup.feature"
   }
 ]

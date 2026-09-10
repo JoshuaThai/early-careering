@@ -1,4 +1,6 @@
-Feature: Test if the user can access the homepage and that you can access the other pages from it.
+Feature: Homepage Tests
+Description: Test if the user can access the homepage and that you can access the other pages 
+from it.
 
   @smoke
   Scenario: User can access the homepage
