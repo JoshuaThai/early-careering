@@ -7,6 +7,7 @@ import loginStyles from "./login.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { signIn } from "@/lib/sign-in";
+import { redirect } from "next/navigation";
 
 export function SignUpSwitch({ isLogin, setIsLogin }: 
     { isLogin: boolean, setIsLogin: (value: boolean) => void }) {
@@ -25,6 +26,9 @@ export function SignUpBox(){
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [careerJourney, setCareerJourney] = useState("");
+    const [industry, setIndustry] = useState("");
     const [passwordValid, setPasswordValid] = useState(false);
     const [confirmPassword, setConfirmPassword] = useState(false);
 
@@ -34,6 +38,9 @@ export function SignUpBox(){
                 email, // user email address
                 password, // user password -> min 8 characters by default
                 name, // user display name
+                phoneNumber, // user phone number
+                careerJourney, // user career journey
+                industry, // user industry
                 callbackURL: "/dashboard" // A URL to redirect to after the user verifies their email (optional)
             }, {
                 onRequest: (ctx) => {
@@ -41,6 +48,7 @@ export function SignUpBox(){
                 },
                 onSuccess: (ctx) => {
                     //redirect to the dashboard or sign in page
+                    redirect("/dashboard");
                 },
                 onError: (ctx) => {
                     // display the error message
@@ -75,7 +83,7 @@ export function SignUpBox(){
                 <div className={loginStyles.formGroup}>
                     <label htmlFor="email">Email</label><br />
                     <input type="email" id="email" name="email" 
-                    className={loginStyles.formFields} required />
+                    className={loginStyles.formFields} required onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <br />
                 <div className={loginStyles.formGroup}>
@@ -105,35 +113,39 @@ export function SignUpBox(){
                 <div className={`${loginStyles.formGroup} ${loginStyles.fieldSeperator}`}>
                     <label htmlFor="first-name">First Name</label><br />
                     <input type="text" id="first-name" name="first-name" 
-                    className={loginStyles.formFields} required />
+                    className={loginStyles.formFields} required onChange={(e) => setName(e.target.value)} />
                 </div>
                 <br />
                 <div className={loginStyles.formGroup}>
                     <label htmlFor="phone-number">Phone Number</label><br />
                     <input type="text" id="phone-number" name="phone-number" 
-                    className={loginStyles.formFields} required />
+                    className={loginStyles.formFields} required onChange={(e) => setPhoneNumber(e.target.value)} />
                 </div>
                 <br />
                 <div className={loginStyles.careerJourneyQuestion}>
                     <label htmlFor="career-journey" id={loginStyles.careerJourney}>Where are you in your career journey?</label><br />
-                    <input type="radio" id="student" name="career-journey" value="student" required />
+                    <input type="radio" id="student" name="career-journey" value="student" required onChange={(e) => setCareerJourney(e.target.value)} />
                     <label htmlFor="student">Early Career/Student or Entry Level</label><br />
-                    <input type="radio" id="mid-career" name="career-journey" value="mid-career" required />
+                    <input type="radio" id="mid-career" name="career-journey" value="mid-career" required onChange={(e) => setCareerJourney(e.target.value)} />
                     <label htmlFor="mid-career">Mid-Career or Mid-Level</label><br />
-                    <input type="radio" id="later-career" name="career-journey" value="later-career" required />
+                    <input type="radio" id="later-career" name="career-journey" value="later-career" required onChange={(e) => setCareerJourney(e.target.value)} />
                     <label htmlFor="later-career">Late-Career or Senior-Level</label>
                 </div>
                 <br />
                 <div className={loginStyles.industryQuestion}>
-                    <label htmlFor="industry">What industry are you working on planning to work for?</label><br />
-                    <select id="industry" name="industry" className={loginStyles.formFields} required>
-                        <option value="">Select an industry</option>
-                        <option value="technology">Technology</option>
-                        <option value="finance">Finance</option>
-                        <option value="healthcare">Healthcare</option>
-                        <option value="education">Education</option>
-                        <option value="other">Other</option>
-                    </select>
+                    <div className={loginStyles.industrySelect}>
+                        <label htmlFor="industry">What industry are you working on planning to work for?</label><br />
+                        <select id="industry" name="industry" className={loginStyles.formFields} 
+                        required onChange={(e) => setIndustry(e.target.value)}>
+                            <option value="">Select an industry</option>
+                            <option value="technology">Technology</option>
+                            <option value="finance">Finance</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="education">Education</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
                 </div>
                 <br />
                 <div className={loginStyles.formGroup}>
