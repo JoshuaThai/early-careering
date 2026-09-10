@@ -191,6 +191,14 @@
     }
 }
 
+.industrySelect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+
 /* Terms and Conditions styles */
 .termsCheckbox{
     display: flex;

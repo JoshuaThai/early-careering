@@ -33,3 +33,8 @@ Creating/Merging Another Branch for any project
 
 NEAT TRICKS WITH GIT:
 1.) git add . <---- It adds all untracked files safely
+
+Starting up MYSQL Server (Do this whenever you want to test anything that requires authentication):
+1.) Go to Powershell as Admin
+2.) Run "Get-Service *mysql*"
+3.) Then run "Start-Service MySQL80"

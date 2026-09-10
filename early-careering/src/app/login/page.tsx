@@ -6,6 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { signIn } from "@/lib/sign-in";
 import { LoginBox } from "./login";
 import { Footer } from "../components/main";
+import { auth } from "@/lib/auth"; 
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
 function Header(){
     return (
@@ -28,7 +31,14 @@ function Header(){
 )};
 
 
-export default function LoginPage() {
+export default async function LoginPage() {
+    const session = await auth.api.getSession({
+        headers: await headers(),
+    });
+
+    if (session) {
+        redirect("/dashboard");
+    }
     return (
         <div className={styles.page}>
             <Header />
