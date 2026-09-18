@@ -50,6 +50,30 @@
   display: flex;
 }
 
+.page-module___8aEwW__modalContentLinks {
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+}
+
+.page-module___8aEwW__modalContentLinks a {
+  font-size: 32px;
+}
+
+.page-module___8aEwW__modalContentLinks a:last-child {
+  font-weight: 800;
+}
+
+.page-module___8aEwW__modalContentLinks a:last-child:hover {
+  border: 1px solid #000;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.page-module___8aEwW__modalContentLinks a:hover {
+  text-decoration: underline;
+}
+
 .page-module___8aEwW__logo {
   padding-left: 10px;
   font-size: 36px;

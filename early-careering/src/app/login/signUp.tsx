@@ -47,7 +47,7 @@ export function SignUpBox(){
                     //show loading
                 },
                 onSuccess: (ctx) => {
-                    //redirect to the dashboard or sign in page
+                    //redirect to the dashboard
                     redirect("/dashboard");
                 },
                 onError: (ctx) => {
