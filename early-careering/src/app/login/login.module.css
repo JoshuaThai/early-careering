@@ -55,6 +55,12 @@
     }
 }
 
+.errorMessage{
+    color: red;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
 .loginForm{
     display: flex;
     flex-direction: column;
