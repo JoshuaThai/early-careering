@@ -38,3 +38,8 @@ Starting up MYSQL Server (Do this whenever you want to test anything that requir
 1.) Go to Powershell as Admin
 2.) Run "Get-Service *mysql*"
 3.) Then run "Start-Service MySQL80"
+
+Make DB work on local machine
+1.) Comment out "port: Number(process.env.DB_PORT)," in db.ts 
+2.) Uncomment "baseURL: "http://localhost:3000", " in auth-client.ts 
+3.) Comment out "port: Number(process.env.DB_PORT!)," in drizzle.config.ts 
