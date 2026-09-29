@@ -105,3 +105,27 @@
         font-size: 48px;
     }
 }
+
+@media (max-width: 1080px){
+    .featuresGrid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        /* border: 1px solid white; */
+    }
+
+    .featuresCard{
+        margin-top: 30px;
+        &:hover{
+            transform: translateY(0px)
+        }
+    }
+
+    .featuresHeading{
+        font-size: 48px;
+    }
+
+    .featuresVersus{
+        font-size: 48px;
+    }
+}
