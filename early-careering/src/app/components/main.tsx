@@ -16,7 +16,7 @@ export function Footer(){
                 <h1 className={styles.logo}><a href="/">EarlyCareering</a></h1>
                 <nav className={styles.footerNav}>
                     <a href="/">Home</a>
-                    <a href="/somePage">Features</a>
+                    <a href="/features">Features</a>
                     <a href="/somePage">About</a>
                     <a href="/somePage">Contact</a>
                 </nav>
