@@ -6,10 +6,14 @@ import { faBars, faClipboard,
 import { useState } from "react";
 
 export function CallToAction(){
+    function toLogin(){
+        window.location.href = "/login";
+    }
     return(
         <section className={styles.callToAction}>
             <h2>Ready to take control of your job search? Try out EarlyCareering yourself!</h2>
-            <button className={styles.tryNowButton}>Try it now! &rarr;</button>
+            <button 
+            className={styles.tryNowButton} onClick={toLogin}>Try it now! &rarr;</button>
         </section>
     )
 };

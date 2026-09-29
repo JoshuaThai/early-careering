@@ -37,7 +37,7 @@ export function NavBar({session}:NavBarProps){
             </button>
             <nav className={styles.nav}>
                 <a href="/">Home</a>
-                <a href="/somePage">Features</a>
+                <a href="/features">Features</a>
                 <a href="/somePage">About</a>
             </nav>
             <LoginButton showLogin={!session} />
