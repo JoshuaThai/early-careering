@@ -12,7 +12,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "EarlyCareering | Login", // Title of Page
+  title: "Login | EarlyCareering", // Title of Page
   description: "EarlyCareering's Login Page", // Description of Page
 };
 

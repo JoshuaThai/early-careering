@@ -1,11 +1,11 @@
-import {Given, When, Then, Before, BeforeAll} from "@cucumber/cucumber";
-import {expect} from "@playwright/test";
+import { Given, When, Then, Before, BeforeAll } from "@cucumber/cucumber";
+import { expect } from "@playwright/test";
 
 import LoginPage from "../pages/LoginPage";
 
 let loginPage: LoginPage;
 
-Before(async function() {
+Before(async function () {
   // This hook runs before all scenarios
   // You can perform setup tasks here, such as launching a browser or initializing test data
   loginPage = new LoginPage(this.page);
