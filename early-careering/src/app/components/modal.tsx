@@ -21,8 +21,8 @@ export function MenuModal({ modalOpen, setModalOpen }:
                 {/* The nav links when user is not logged in */}
                 <nav className={styles.modalContentLinks}>
                     <a href="/">Home</a>
-                    <a href="/">Features</a>
-                    <a href="/">About</a>
+                    <a href="/features">Features</a>
+                    <a href="/about">About</a>
                     <a href="/login">Login/Signup</a>
                 </nav>
             </div>

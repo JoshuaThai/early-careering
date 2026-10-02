@@ -37,11 +37,16 @@ export function Modal({ modalOpen, setModalOpen }:
 };
 
 export function Title({ title, subtitle }: { title: string; subtitle: string }) {
+    function toLogin(){
+        window.location.href = "/login";
+    }
     return (
         <section className={styles.title}>
             <h1 className={styles.titleText}>{title}</h1>
             <p className={styles.subtitle}>{subtitle}</p>
-            <button className={styles.startNowButton}>Ready? Start Now!</button>
+            <button 
+            className={styles.startNowButton} 
+            onClick={toLogin}>Ready? Start Now!</button>
         </section>
     )
 };
@@ -73,6 +78,10 @@ export function FeatureBox({ title, description,
 };
 
 export function Features(){
+    
+    function toFeatures(){
+        window.location.href = "/features";
+    }
     return (
         <section className={styles.feature}>
             <h2>Core Features</h2>
@@ -109,7 +118,9 @@ export function Features(){
                     backgroundColor="rgba(0, 50, 149, 1)" 
                     iconColor="white" />
             </div>
-            <button className={styles.viewAllFeatures}>View all Features Here &rarr;</button>
+            <button 
+            className={styles.viewAllFeatures}
+            onClick={toFeatures}>View all Features Here &rarr;</button>
         </section>
     )
 }

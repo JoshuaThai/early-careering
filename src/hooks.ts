@@ -8,14 +8,19 @@ BeforeAll(async function() {
     browser = await chromium.launch({headless: true}); // Launch the browser in headless mode
 })
 Before(async function() {
-    const context: BrowserContext = await browser.newContext();
+    const context: BrowserContext = await browser.newContext({
+        recordVideo: {
+            dir: "test-results/videos"
+        },
+    });
     const page: Page = await context.newPage();
     
     this.context = context;
     this.page = page;
 });
 
-After(async function() {
+After(async function({pickle}) {
+    await this.page.screenshot({ path: `test-results/screenshots/${pickle.name}.png`, fullPage: true});
     await this.page.close();
     await this.context.close();
 });

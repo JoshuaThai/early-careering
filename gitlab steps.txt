@@ -19,7 +19,7 @@ Regular Commit in main branch (Just to know)
 Creating/Merging Another Branch for any project
 1.) Create it in Gitlab by going to plus sign.
 2.) git fetch origin <-----Rescan GitLab for any new updates or branches.
-3.) git checkout your-new-branch-name
+3.) git switch your-new-branch-name
 4.) git status <----- check for commits
 5.) git add <file-name>
 6.) git status

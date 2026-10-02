@@ -12,8 +12,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Login | EarlyCareering", // Title of Page
-  description: "EarlyCareering's Login Page", // Description of Page
+  title: "About | EarlyCareering", // Title of Page
+  description: "EarlyCareering's About Page", // Description of Page
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
