@@ -28,7 +28,12 @@ export default class HomePage {
         productHeading: this.page.getByRole('heading', { name: 'What on Earth is' }),
         featuresHeading: this.page.getByRole('heading', { name: 'Core Features' }),
         callToActionHeading: this.page.getByRole('heading', { name: 'Ready to take control of your' }),
-
+        
+        // Footer
+        homeFooterLink: this.page.getByRole('link', { name: 'Home' }).nth(1),
+        featuresFooterLink: this.page.getByRole('link', { name: 'Features' }).nth(1),
+        aboutFooterLink: this.page.getByRole('link', { name: 'About' }).nth(1),
+        contactFooterLink: this.page.getByRole('link', { name: 'Contact' })
         }
     }
 
