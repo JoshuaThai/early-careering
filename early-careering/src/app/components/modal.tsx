@@ -56,7 +56,7 @@ function LogoutButton() {
 export function MenuModal({ modalOpen, setModalOpen, session }: 
     { modalOpen: boolean; 
         setModalOpen: (open: boolean) => void;
-    session: SessionData}) {
+    session: SessionData | null}) {
     const [dropdown, showDropdown] = useState(false);
     // const [modal, setModal] = useState(false);
 
@@ -97,18 +97,18 @@ export function MenuModal({ modalOpen, setModalOpen, session }:
     )
 };
 
-export function MenuModalContainer(){
-    const [modalOpen, setModalOpen] = useState(false);
+// export function MenuModalContainer(){
+//     const [modalOpen, setModalOpen] = useState(false);
 
-    return(
-        <div>
-            {/* This part is the client-sided portion */}
-            <MenuModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
-            <button className={styles.menuButton} aria-label="Menu" onClick={()=>{setModalOpen(true)}}>
-                <FontAwesomeIcon icon={faBars} 
-                className={styles.menuIcon} 
-                size="lg"/>
-            </button>
-        </div>
-    )
-}
+//     return(
+//         <div>
+//             {/* This part is the client-sided portion */}
+//             <MenuModal modalOpen={modalOpen} setModalOpen={setModalOpen}/>
+//             <button className={styles.menuButton} aria-label="Menu" onClick={()=>{setModalOpen(true)}}>
+//                 <FontAwesomeIcon icon={faBars} 
+//                 className={styles.menuIcon} 
+//                 size="lg"/>
+//             </button>
+//         </div>
+//     )
+// }
