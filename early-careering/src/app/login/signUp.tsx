@@ -29,10 +29,13 @@ export function SignUpBox(){
     const [phoneNumber, setPhoneNumber] = useState("");
     const [careerJourney, setCareerJourney] = useState("");
     const [industry, setIndustry] = useState("");
+    const [otherIndustry, setOtherIndustry] = useState(false);
     const [passwordValid, setPasswordValid] = useState(false);
     const [confirmPassword, setConfirmPassword] = useState(false);
 
     const handleSignUp = async (event: React.SubmitEvent<HTMLFormElement>) => {
+        // Set the industry field to the other industry inputted by user.
+        // setIndustry(otherIndustry); 
         event.preventDefault();
         const { data, error } = await authClient.signUp.email({
                 email, // user email address
@@ -73,6 +76,15 @@ export function SignUpBox(){
             setConfirmPassword(true);
         }
     };
+
+    const otherAppear = (industry: string) => {
+        setIndustry(industry);
+        if (industry == "Other"){
+            setOtherIndustry(true);
+        } else{
+            setOtherIndustry(false);
+        }
+    }
 
     
     return (
@@ -136,14 +148,21 @@ export function SignUpBox(){
                     <div className={loginStyles.industrySelect}>
                         <label htmlFor="industry">What industry are you working on planning to work for?</label><br />
                         <select id="industry" name="industry" className={loginStyles.formFields} 
-                        required onChange={(e) => setIndustry(e.target.value)}>
+                        required onChange={(e) => otherAppear(e.target.value)}>
                             <option value="">Select an industry</option>
-                            <option value="technology">Technology</option>
-                            <option value="finance">Finance</option>
-                            <option value="healthcare">Healthcare</option>
-                            <option value="education">Education</option>
-                            <option value="other">Other</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Education">Education</option>
+                            <option value="Other">Other</option>
                         </select>
+                        <div className={loginStyles.otherIndustry}
+                        style={{display : otherIndustry ? "flex" : "none"}}>
+                            <span>Enter your Industry:</span>
+                            <input className={loginStyles.formFields}
+                            type="text" placeholder="E.g. Fashion"
+                            onChange={(e) => setIndustry(e.target.value)}></input>
+                        </div>
                     </div>
                     
                 </div>
