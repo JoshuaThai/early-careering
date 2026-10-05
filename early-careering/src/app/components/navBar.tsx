@@ -59,12 +59,13 @@ function ProfileButton({session}: {session: SessionData}){
     const user = session.user;
     return(
         <div className={navStyles.dropdown}>
-            <button className={`${navStyles.profileButton} ${navStyles.dropBtn}`}>
+            <button id={"profileDropdown"}
+            className={`${navStyles.profileButton} ${navStyles.dropBtn}`}>
                 {user?.name} &#x25BC;
             </button>
               <div className={navStyles.dropdownContent}>
-                <a href="/profile">Profile</a>
-                <a href="#">Privacy Policy</a>
+                <a href="/profile">Your Profile</a>
+                <a href="/terms">Terms & Conditions</a>
                 <button onClick={handleLogout}>Log Out</button>
             </div>
         </div>

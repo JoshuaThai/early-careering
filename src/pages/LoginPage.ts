@@ -26,7 +26,9 @@ export default class LoginPage {
             phoneNumberField: this.page.getByRole('textbox', { name: 'Phone Number *' }),
             careerJourneyQuestion: this.page.getByText('Where are you in your career'),
             industryQuestion: this.page.getByLabel('What industry are you working'),
-            termsAndConditions: this.page.getByText('By checking this box, you')
+            termsAndConditions: this.page.getByText('By checking this box, you'),
+            termsCheckbox: this.page.getByRole('checkbox', { name: 'By checking this box, you' }),
+            termsLink: this.page.getByRole('link', { name: 'Terms and Conditions' })
         }
     }
 

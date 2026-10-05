@@ -82,11 +82,12 @@ export function MenuModal({ modalOpen, setModalOpen, session }:
                     <a href="/dashboard">Dashboard</a>
                     <a href="/contact">Contact</a>
                     <a href="/faqs">FAQs</a>
-                    <button onClick={() => showDropdown(!dropdown)}>{session?.user?.name} {!dropdown ? "▶" : "▼"}</button>
+                    <button id={"profileCollapsible"}
+                    onClick={() => showDropdown(!dropdown)}>{session?.user?.name} {!dropdown ? "▶" : "▼"}</button>
                 </nav>
                 <nav className={styles.modalContentLinks} style={{display: dropdown ? "flex" : "none"}}>
                     <a href="/profile">Your Profile</a>
-                    <a href="/contact">Privacy Policy</a>
+                    <a href="/contact">Terms & Conditions</a>
                     {/* <a href="/" style={{color : "white", 
                         backgroundColor : "red", borderRadius: "16px"}}>Logout</a> */}
                     <LogoutButton />

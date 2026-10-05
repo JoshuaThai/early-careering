@@ -6,7 +6,7 @@ export function Hero({name}:{name: string}){
             <div className={styles.circle}>
             </div>
             <div className={styles.heroSectionTitles}>
-                <h1>Welcome, {name}!</h1>
+                <h1 id={"heroTitle"}>Welcome, {name}!</h1>
             </div>
         </section>
     )
