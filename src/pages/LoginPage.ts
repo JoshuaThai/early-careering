@@ -28,7 +28,11 @@ export default class LoginPage {
             industryQuestion: this.page.getByLabel('What industry are you working'),
             termsAndConditions: this.page.getByText('By checking this box, you'),
             termsCheckbox: this.page.getByRole('checkbox', { name: 'By checking this box, you' }),
-            termsLink: this.page.getByRole('link', { name: 'Terms and Conditions' })
+            termsLink: this.page.getByRole('link', { name: 'Terms and Conditions' }),
+            signUpButton: this.page.locator('form').getByRole('button', { name: 'Sign Up' }),
+
+            // Error Message
+            duplicateEmailMessage: this.page.getByText('User already exists. Use'),
         }
     }
 

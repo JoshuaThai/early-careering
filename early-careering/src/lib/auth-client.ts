@@ -8,5 +8,5 @@ export const authClient = createAuthClient({
     plugins: [
         inferAdditionalFields<typeof auth>(),
     ],
-    
+
 })

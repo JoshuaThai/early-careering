@@ -32,6 +32,7 @@ export function SignUpBox(){
     const [otherIndustry, setOtherIndustry] = useState(false);
     const [passwordValid, setPasswordValid] = useState(false);
     const [confirmPassword, setConfirmPassword] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
 
     const handleSignUp = async (event: React.SubmitEvent<HTMLFormElement>) => {
         // Set the industry field to the other industry inputted by user.
@@ -55,7 +56,17 @@ export function SignUpBox(){
                 },
                 onError: (ctx) => {
                     // display the error message
-                    alert(ctx.error.message);
+                    // alert(ctx.error.message);
+                    if(ctx.error.message == "Failed to create user"){
+                        setErrorMessage("User already exists. Use another email.");
+                    } else{
+                        setErrorMessage(ctx.error.message);
+                    }
+                    window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: "smooth",
+                    })
                 },
         });
     };
@@ -90,6 +101,9 @@ export function SignUpBox(){
     return (
         <div>
             <h2 style={{ textAlign: 'center' }}>Sign Up</h2>
+            <p id={"errorMessage"} style={{color: "red", 
+                textAlign: "center", 
+                fontSize: "24px", marginTop: "10px"}}>{errorMessage}</p>
             <br />
             <form className={loginStyles.loginForm} method="POST" onSubmit={handleSignUp}>
                 <div className={loginStyles.formGroup}>

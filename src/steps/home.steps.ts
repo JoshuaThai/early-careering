@@ -4,12 +4,15 @@ import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
 import FeaturesPage from "../pages/FeaturesPage";
 import AboutPage from "../pages/AboutPage";
+import DashboardPage from "../pages/DashboardPage";
 import {CustomWorld} from "../world";
 
 let homePage: HomePage;
 let loginPage: LoginPage;
 let featuresPage: FeaturesPage;
 let aboutPage: AboutPage;
+let dashboardPage: DashboardPage;
+
 
 Before(async function() {
   // This hook runs before all scenarios
@@ -18,7 +21,8 @@ Before(async function() {
   loginPage = new LoginPage(this.page);
   featuresPage = new FeaturesPage(this.page);
   aboutPage = new AboutPage(this.page);
-  
+  dashboardPage = new DashboardPage(this.page);
+
 });
 
 Given('the user is on the homepage', async function () {
@@ -121,12 +125,16 @@ Then('the user should be on the {string} page', async function (linkName: string
     await expect(this.page).toHaveTitle("Login | EarlyCareering");
     await expect(loginPage.elements.loginTitle).toBeVisible();
   }
-  if(linkName == "features"){
+  else if(linkName == "features"){
     await expect(this.page).toHaveTitle("Features | EarlyCareering");
     await expect(featuresPage.elements.title).toBeVisible();
   }
-  if(linkName == "about"){
+  else if(linkName == "about"){
     await expect(this.page).toHaveTitle("About | EarlyCareering");
     await expect(aboutPage.elements.heroTitle).toBeVisible();
+  }
+  else if(linkName == "dashboard"){
+    await expect(dashboardPage.page).toHaveTitle("Dashboard | EarlyCareering");
+    await expect(dashboardPage.elements.heroTitle).toBeVisible();
   }
 });
