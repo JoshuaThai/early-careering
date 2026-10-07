@@ -52,6 +52,17 @@ jobs:
         working-directory: early-careering
         run: npx drizzle-kit migrate
 
+      - name: Inspect CI database
+        env:
+          MYSQL_PWD: ${{ env.DB_PASSWORD }}
+        run: |
+          mysql --protocol=TCP \
+            -h "$DB_HOST" \
+            -P "$DB_PORT" \
+            -u "$DB_USER" \
+            "$DB_NAME" \
+            -e 'SELECT DATABASE(); SHOW TABLES; SELECT COUNT(*) AS user_count FROM `user`;'
+
       - name: Build project
         run: |
           npm --prefix early-careering run dev > server.log 2>&1 &
