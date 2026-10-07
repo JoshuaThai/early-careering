@@ -134,7 +134,7 @@ Then('the user should be on the {string} page', async function (linkName: string
     await expect(aboutPage.elements.heroTitle).toBeVisible();
   }
   else if(linkName == "dashboard"){
-    await expect(dashboardPage.page).toHaveTitle("Dashboard | EarlyCareering");
+    await expect(this.page).toHaveTitle("Dashboard | EarlyCareering");
     await expect(dashboardPage.elements.heroTitle).toBeVisible();
   }
 });
