@@ -30,7 +30,7 @@ jobs:
       DB_PASSWORD: testpassword
       DB_NAME: earlycareering_test
 
-      BETTER_AUTH_URL: http://127.0.0.1:3000
+      BETTER_AUTH_URL: http://localhost:3000
       BETTER_AUTH_SECRET: ci-only-better-auth-secret-32-chars-minimum
 
     steps:
@@ -62,7 +62,7 @@ jobs:
           npx --no-install wait-on \
             --verbose \
             --timeout 60000 \
-            http://127.0.0.1:3000 || {
+            http://localhost:3000 || {
               echo "Application failed to start:"
               cat server.log
               exit 1
