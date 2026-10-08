@@ -43,3 +43,11 @@ Make DB work on local machine
 1.) Comment out "port: Number(process.env.DB_PORT)," in db.ts 
 2.) Uncomment "baseURL: "http://localhost:3000", " in auth-client.ts 
 3.) Comment out "port: Number(process.env.DB_PORT!)," in drizzle.config.ts 
+
+Accessing Local MYSQL DB:
+1.) Access Command Prompt as Admin
+2.) cd "C:\Program Files\MySQL\MySQL Server 8.0\bin" && mysql.exe -u root -p
+3.) Enter SQL root password
+4.) SHOW DATABASES;
+5.) USE your_database_name;
+6.) SHOW TABLES;

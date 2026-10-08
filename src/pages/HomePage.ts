@@ -33,7 +33,16 @@ export default class HomePage {
         homeFooterLink: this.page.getByRole('link', { name: 'Home' }).nth(1),
         featuresFooterLink: this.page.getByRole('link', { name: 'Features' }).nth(1),
         aboutFooterLink: this.page.getByRole('link', { name: 'About' }).nth(1),
-        contactFooterLink: this.page.getByRole('link', { name: 'Contact' })
+        contactFooterLink: this.page.getByRole('link', { name: 'Contact' }),
+
+        // Responsive Web View
+        menuButton: this.page.getByRole('button', { name: 'Menu' }),
+        closeMenuButton: this.page.getByRole('button', { name: 'X', exact: true }),
+        homeMenuButton: this.page.getByRole('banner').getByRole('link', { name: 'Home' }),
+        featuresMenuButton: this.page.getByRole('banner').getByRole('link', { name: 'Features' }),
+        aboutMenuButton: this.page.getByRole('banner').getByRole('link', { name: 'About' }),
+        loginMenuButton: this.page.getByRole('link', { name: 'Login/Signup' })
+        
         }
     }
 

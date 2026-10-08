@@ -2,10 +2,16 @@ import {Given, When, Then, Before, BeforeAll} from "@cucumber/cucumber";
 import {expect} from "@playwright/test";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
+import FeaturesPage from "../pages/FeaturesPage";
+import AboutPage from "../pages/AboutPage";
+import DashboardPage from "../pages/DashboardPage";
 import {CustomWorld} from "../world";
 
 let homePage: HomePage;
 let loginPage: LoginPage;
+let featuresPage: FeaturesPage;
+let aboutPage: AboutPage;
+let dashboardPage: DashboardPage;
 
 
 Before(async function() {
@@ -13,6 +19,10 @@ Before(async function() {
   // You can perform setup tasks here, such as launching a browser or initializing test data
   homePage = new HomePage(this.page);
   loginPage = new LoginPage(this.page);
+  featuresPage = new FeaturesPage(this.page);
+  aboutPage = new AboutPage(this.page);
+  dashboardPage = new DashboardPage(this.page);
+
 });
 
 Given('the user is on the homepage', async function () {
@@ -65,4 +75,66 @@ When('the users click on the Login-Sign Up button', async function () {
 Then('the user verifies that they end up on the login page', async function () {
   await expect(this.page).toHaveURL('http://localhost:3000/login');
   await expect(loginPage.elements.loginTitle).toBeVisible();
+});
+
+When('the user reduces the window size to {string} by {string}', 
+  async function (width: String, height: String) {
+    await this.page.setViewportSize({ width: Number(width), height: Number(height) });
+});
+
+Then('the user should see the hamburger menu button', async function () {
+  await expect(homePage.elements.menuButton).toBeVisible();
+});
+
+Then('the user clicks the hamburger menu button', async function () {
+  await expect(homePage.elements.menuButton).toBeVisible();
+  await homePage.elements.menuButton.click();
+});
+
+Then('the user should see the modal window with nav links for logged out users', async function () {
+  await expect(homePage.elements.homeMenuButton).toBeVisible();
+  await expect(homePage.elements.featuresMenuButton).toBeVisible();
+  await expect(homePage.elements.aboutMenuButton).toBeVisible();
+  await expect(homePage.elements.loginMenuButton).toBeVisible();
+});
+
+Then('the user should click the {string} link', async function (linkName: string) {
+  
+  if(linkName == "Home"){
+    await homePage.elements.homeMenuButton.click();
+  }
+  if(linkName == "login"){
+    await homePage.elements.loginMenuButton.click();
+  }
+  if(linkName == "features"){
+    await homePage.elements.featuresMenuButton.click();
+  }
+  if(linkName == "about"){
+    await homePage.elements.aboutMenuButton.click();
+  }
+});
+
+Then('the user should be on the homepage', async function () {
+  
+  await expect(this.page).toHaveTitle("Home | EarlyCareering");
+  await expect(homePage.elements.title).toBeVisible();
+});
+
+Then('the user should be on the {string} page', async function (linkName: string) {
+  if(linkName == "login"){
+    await expect(this.page).toHaveTitle("Login | EarlyCareering");
+    await expect(loginPage.elements.loginTitle).toBeVisible();
+  }
+  else if(linkName == "features"){
+    await expect(this.page).toHaveTitle("Features | EarlyCareering");
+    await expect(featuresPage.elements.title).toBeVisible();
+  }
+  else if(linkName == "about"){
+    await expect(this.page).toHaveTitle("About | EarlyCareering");
+    await expect(aboutPage.elements.heroTitle).toBeVisible();
+  }
+  else if(linkName == "dashboard"){
+    await expect(this.page).toHaveTitle("Dashboard | EarlyCareering");
+    await expect(dashboardPage.elements.heroTitle).toBeVisible();
+  }
 });

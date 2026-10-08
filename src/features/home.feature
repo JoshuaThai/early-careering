@@ -25,3 +25,52 @@ from it.
     Given the user is on the homepage
     When the users click on the Login-Sign Up button
     Then the user verifies that they end up on the login page
+
+  @regression
+  Scenario: Check if user can see hamburger menu button when window size is reduced to 700 x 700
+    Given the user is on the homepage
+    When the user reduces the window size to "700" by "700"
+    Then the user should see the hamburger menu button
+
+  @regression
+  Scenario: Check if a modal window appears when the user clicks the hamburger menu button
+    Given the user is on the homepage
+    When the user reduces the window size to "700" by "700"
+    Then the user clicks the hamburger menu button
+    And the user should see the modal window with nav links for logged out users
+
+  @regression
+  Scenario: Check if you can redirect to home from the link in hamburger menu modal
+    Given the user is on the homepage
+    When the user reduces the window size to "700" by "700"
+    Then the user clicks the hamburger menu button
+    And the user should see the modal window with nav links for logged out users
+    And the user should click the "home" link
+    Then the user should be on the homepage
+
+  @regression
+  Scenario: Check if you can redirect to login page from the link in hamburger menu modal
+    Given the user is on the homepage
+    When the user reduces the window size to "700" by "700"
+    Then the user clicks the hamburger menu button
+    And the user should see the modal window with nav links for logged out users
+    And the user should click the "login" link
+    And the user should be on the "login" page
+
+  @regression
+  Scenario: Check if you can redirect to features page from the link in hamburger menu modal
+    Given the user is on the homepage
+    When the user reduces the window size to "700" by "700"
+    Then the user clicks the hamburger menu button
+    And the user should see the modal window with nav links for logged out users
+    And the user should click the "features" link
+    Then the user should be on the "features" page
+
+  @regression
+  Scenario: Check if you can redirect to about page from the link in hamburger menu modal
+    Given the user is on the homepage
+    When the user reduces the window size to "700" by "700"
+    Then the user clicks the hamburger menu button
+    And the user should see the modal window with nav links for logged out users
+    And the user should click the "about" link
+    Then the user should be on the "about" page

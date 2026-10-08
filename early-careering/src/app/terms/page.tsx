@@ -6,7 +6,7 @@ import termsStyles from "./terms.module.css";
 function TermsPart({title, content}: {title: string, content: string}) {
     return (
         <div className={termsStyles.termsPart}>
-            <h2>{title}</h2>
+            <h2 className={"TermsSection"}>{title}</h2>
             <br />
             <p>{content}</p>
             <br />

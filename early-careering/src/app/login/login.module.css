@@ -125,6 +125,12 @@
     }
 }
 
+/* @media (max-width: 576px){
+    .formFields{
+        font-size: 20px;
+    }
+} */
+
 .fieldSeperator{
     border-top: 1px solid #ccc;
     border-radius: 4px;
@@ -204,6 +210,29 @@
     align-items: center;
     width: 95%;
 }
+
+.otherIndustry{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+
+    span{
+        font-size: 24px;
+        margin-right: 10px;
+    }
+}
+
+/* @media (max-width: 1920px){
+    .otherIndustry{
+        display: flex;
+        flex-direction: column;
+        span{
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    }
+} */
 
 /* Terms and Conditions styles */
 .termsCheckbox{

@@ -8,6 +8,31 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: testpassword
+          MYSQL_DATABASE: earlycareering_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -ptestpassword"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
+
+    env:
+      DB_HOST: 127.0.0.1
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: testpassword
+      DB_NAME: earlycareering_test
+
+      BETTER_AUTH_URL: http://localhost:3000
+      BETTER_AUTH_SECRET: ci-only-better-auth-secret-32-chars-minimum
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -23,6 +48,21 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
+      - name: Run Drizzle migrations
+        working-directory: early-careering
+        run: npx drizzle-kit migrate
+
+      - name: Inspect CI database
+        env:
+          MYSQL_PWD: ${{ env.DB_PASSWORD }}
+        run: |
+          mysql --protocol=TCP \
+            -h "$DB_HOST" \
+            -P "$DB_PORT" \
+            -u "$DB_USER" \
+            "$DB_NAME" \
+            -e 'SELECT DATABASE(); SHOW TABLES; SELECT COUNT(*) AS user_count FROM `user`;'
+
       - name: Build project
         run: |
           npm --prefix early-careering run dev > server.log 2>&1 &
@@ -33,7 +73,7 @@ jobs:
           npx --no-install wait-on \
             --verbose \
             --timeout 60000 \
-            http://127.0.0.1:3000 || {
+            http://localhost:3000 || {
               echo "Application failed to start:"
               cat server.log
               exit 1

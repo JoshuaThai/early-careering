@@ -2,6 +2,20 @@ import { Page } from "@playwright/test";
 
 export default class LoginPage {
     page: Page;
+    duplicate_account_info: Record<string,string> ={
+        "email": "testing1234@email.com",
+        "password": "123456789!",
+        "first_name": "Josh",
+        "phone_number": "4145009780",
+        "career_journey": "Early Career",
+        "industry": "Technology",
+    }
+
+    choices : Record<string, string> = {
+        "Early Career" : 'student',
+        "Mid-Level" : 'mid-career',
+        "Late Career" : 'later-career',
+    }
 
 
     constructor(page: Page){
@@ -26,7 +40,13 @@ export default class LoginPage {
             phoneNumberField: this.page.getByRole('textbox', { name: 'Phone Number *' }),
             careerJourneyQuestion: this.page.getByText('Where are you in your career'),
             industryQuestion: this.page.getByLabel('What industry are you working'),
-            termsAndConditions: this.page.getByText('By checking this box, you')
+            termsAndConditions: this.page.getByText('By checking this box, you'),
+            termsCheckbox: this.page.getByRole('checkbox', { name: 'By checking this box, you' }),
+            termsLink: this.page.getByRole('link', { name: 'Terms and Conditions' }),
+            signUpButton: this.page.locator('form').getByRole('button', { name: 'Sign Up' }),
+
+            // Error Message
+            duplicateEmailMessage: this.page.getByText('User already exists. Use'),
         }
     }
 
