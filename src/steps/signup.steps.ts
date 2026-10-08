@@ -134,3 +134,28 @@ Then('the user should see an error message that says {string}',
     await expect(loginPage.elements.duplicateEmailMessage).toBeVisible();
   }
 });
+
+Then('the user {string}', async function (actionName: string) {
+  if(actionName == "logs out"){
+    await expect(dashboardPage.elements.profileDropdown).toBeVisible();
+    await dashboardPage.elements.profileDropdown.hover();
+    await expect(dashboardPage.elements.logOut).toBeVisible();
+    await dashboardPage.elements.logOut.click();
+    await expect(this.page).toHaveTitle("Login | EarlyCareering");
+  }
+});
+
+Then('the user signs up with the duplicate account', async function () {
+  
+  await loginPage.elements.signupSwitch.click();
+  await expect(loginPage.elements.signUpEmailField).toBeVisible();
+  await loginPage.elements.signUpEmailField.fill(loginPage.duplicate_account_info["email"]);
+  await loginPage.elements.signUpPasswordField.fill(loginPage.duplicate_account_info["password"]);
+  await loginPage.elements.signUpConfirmPassField.fill(loginPage.duplicate_account_info["password"]);
+  await loginPage.elements.firstNameField.fill(loginPage.duplicate_account_info["first_name"]);
+  await loginPage.elements.phoneNumberField.fill(loginPage.duplicate_account_info["phone_number"]);
+  await loginPage.page.getByLabel(loginPage.choices[loginPage.duplicate_account_info["career_journey"]]).check();
+  await loginPage.elements.industryQuestion.selectOption(loginPage.duplicate_account_info["industry"]);
+  await loginPage.elements.termsCheckbox.check();
+  await loginPage.elements.signUpButton.click();
+});

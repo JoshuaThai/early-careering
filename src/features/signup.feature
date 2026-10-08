@@ -66,12 +66,13 @@ Description: Test if the signup page works correctly.
     And the user accepts the terms and services
     And the user clicks the "sign up" button
     Then the user should be on the "dashboard" page
+# I need to fix this test case
 
   @regression
   Scenario: Verify that the user cannot sign up with a duplicate email
     Given the user navigates to the login page
     When the user clicks the sign up switch
-    Then the user enters "testing123@email.com" in "email"
+    Then the user enters "testing1234@email.com" in "email"
     And the user enters "123456789!" in "password"
     And the user enters "123456789!" in "confirm password"
     And the user enters "Josh" in "First Name"
@@ -80,5 +81,7 @@ Description: Test if the signup page works correctly.
     And the user selects "Technology" in "Industry"
     And the user accepts the terms and services
     And the user clicks the "sign up" button
-    And the user should remain on the "sign up" page
+    And the user should be on the "dashboard" page
+    And the user "logs out"
+    And the user signs up with the duplicate account
     And the user should see an error message that says "User already exists. Use another email."

@@ -2,6 +2,20 @@ import { Page } from "@playwright/test";
 
 export default class LoginPage {
     page: Page;
+    duplicate_account_info: Record<string,string> ={
+        "email": "testing1234@email.com",
+        "password": "123456789!",
+        "first_name": "Josh",
+        "phone_number": "4145009780",
+        "career_journey": "Early Career",
+        "industry": "Technology",
+    }
+
+    choices : Record<string, string> = {
+        "Early Career" : 'student',
+        "Mid-Level" : 'mid-career',
+        "Late Career" : 'later-career',
+    }
 
 
     constructor(page: Page){
