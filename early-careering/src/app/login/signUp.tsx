@@ -57,11 +57,12 @@ export function SignUpBox(){
                 onError: (ctx) => {
                     // display the error message
                     // alert(ctx.error.message);
-                    if(ctx.error.message == "Failed to create user"){
-                        setErrorMessage("User already exists. Use another email.");
-                    } else{
-                        setErrorMessage(ctx.error.message);
-                    }
+                    // if(ctx.error.message == "Failed to create user"){
+                    //     setErrorMessage("User already exists. Use another email.");
+                    // } else{
+                    //     setErrorMessage(ctx.error.message);
+                    // }
+                    setErrorMessage(ctx.error.message);
                     window.scrollTo({
                         top: 0,
                         left: 0,
