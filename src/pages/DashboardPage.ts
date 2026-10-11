@@ -2,6 +2,14 @@ import { Page } from "@playwright/test";
 
 export default class DashboardPage {
     page: Page;
+    test_account_info = {
+        "email": "test99@email.com",
+        "password": "123456789!",
+        "first_name": "MJ",
+        "phone_number": "4145009780",
+        "career_journey": "Late-Career",
+        "industry": "Technology",
+    }
 
 
     constructor(page: Page){
@@ -26,6 +34,16 @@ export default class DashboardPage {
             navBarMenu: this.page.getByRole('button', { name: 'Menu' }),
             closeMenu: this.page.getByRole('button', { name: 'X', exact: true }),
             viewMore: this.page.locator('#profileCollapsible'),
+
+            // Small Screen Modal Locators will reuse the previously named locators as
+            // it is just the same locator but in the modal window.
+
+            // Footer Locators
+            homeFooterLink: this.page.getByRole('link', { name: 'Home' }),
+            featuresFooterLink: this.page.getByRole('link', { name: 'Features' }),
+            aboutFooterLink: this.page.getByRole('link', { name: 'About' }),
+            contactFooterLink: this.page.getByRole('link', { name: 'Contact' })
+            
 
         }
     }

@@ -2,6 +2,14 @@ import { Page } from "@playwright/test";
 
 export default class LoginPage {
     page: Page;
+    random_account_info: Record<string,string> ={
+        "email": "testing67@email.com",
+        "password": "123456789!",
+        "first_name": "Jim",
+        "phone_number": "4149999999",
+        "career_journey": "Mid-Level",
+        "industry": "Technology",
+    }
     duplicate_account_info: Record<string,string> ={
         "email": "testing1234@email.com",
         "password": "123456789!",
@@ -14,7 +22,7 @@ export default class LoginPage {
     choices : Record<string, string> = {
         "Early Career" : 'student',
         "Mid-Level" : 'mid-career',
-        "Late Career" : 'later-career',
+        "Late-Career" : 'later-career', // This one doesn't work for some reason.
     }
 
 
@@ -28,8 +36,10 @@ export default class LoginPage {
             loginTitle: this.page.getByRole('heading', { name: 'Login' }),
             emailField: this.page.getByRole('textbox', { name: 'Email *' }),
             passwordField: this.page.getByRole('textbox', { name: 'Password *' }),
+            loginButton: this.page.locator('form').getByRole('button', { name: 'Login' }),
             loginSwitch: this.page.getByRole('button', { name: 'Login' }).first(),
             signupSwitch: this.page.getByRole('button', { name: 'Sign Up' }),
+            loginError: this.page.getByText('Invalid email or password'),
 
             // Signup Page
             signUpTitle: this.page.getByRole('heading', { name: 'Sign Up' }),

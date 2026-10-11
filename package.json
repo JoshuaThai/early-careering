@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npx cucumber-js",
     "smoke-test": "npx cucumber-js --tags @smoke",
-    "regression-test" : "npx cucumber-js --tags @regression"
+    "regression-test" : "npx cucumber-js --tags @regression",
+    "current": "npx cucumber-js --tags @current"
   },
   "repository": {
     "type": "git",

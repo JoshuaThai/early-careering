@@ -59,6 +59,16 @@ Then('the user clicks the {string} button', async function (buttonName: string) 
   if(buttonName == "sign up"){
     await expect(loginPage.elements.signUpButton).toBeVisible();
     await loginPage.elements.signUpButton.click();
+    await this.page.waitForLoadState('networkidle');
+  }
+  else if(buttonName == "login"){
+    await expect(loginPage.elements.loginButton).toBeVisible();
+    await loginPage.elements.loginButton.click();
+    await this.page.waitForLoadState('networkidle');
+  }
+  else if(buttonName == "menu"){
+    await expect(dashboardPage.elements.navBarMenu).toBeVisible();
+    await dashboardPage.elements.navBarMenu.click();
   }
 });
 
