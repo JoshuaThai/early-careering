@@ -65,7 +65,9 @@ jobs:
 
       - name: Build project
         run: |
-          npm --prefix early-careering run dev > server.log 2>&1 &
+          npm --prefix early-careering run build
+
+          npm --prefix early-careering run start > server.log 2>&1 &
           SERVER_PID=$!
 
           trap 'kill $SERVER_PID 2>/dev/null || true' EXIT

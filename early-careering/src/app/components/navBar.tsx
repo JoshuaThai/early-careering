@@ -84,6 +84,10 @@ export function NavBar({session}: NavBarProps){
                 size="lg"/>
             </button>
             <nav className={styles.nav}>
+                {/* Home - About */}
+                {/* style ={{display: !session ? "flex" : "none"}}  */}
+                {/* Dashboard - FAQS */}
+                {/* style ={{display: session ? "flex" : "none"}} */}
                 <a href="/" style ={{display: !session ? "flex" : "none"}}>Home</a>
                 <a href="/features" style ={{display: !session ? "flex" : "none"}}>Features</a>
                 <a href="/about" style ={{display: !session ? "flex" : "none"}}>About</a>

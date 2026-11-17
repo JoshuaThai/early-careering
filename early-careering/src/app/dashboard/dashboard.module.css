@@ -1,4 +1,4 @@
-.heroSection{
+.heroSection {
     display: flex;
     flex-direction: column;
     /* align-items: left; */
@@ -10,7 +10,7 @@
     z-index: 0;
 }
 
-.heroSectionTitles{
+.heroSectionTitles {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -25,35 +25,61 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    h1{
-      font-size: 48px;
-      text-shadow: 0 8px 32px 0 rgba(252, 252, 252, 0.35);  
+
+    h1 {
+        font-size: 48px;
+        text-shadow: 0 8px 32px 0 rgba(252, 252, 252, 0.35);
     }
-    h2{
-      font-size: 32px;  
+
+    h2 {
+        font-size: 32px;
     }
 }
 
 
-@keyframes circleAnimation{
-    0%{transform: translateX(0px);}
-    50%{transform: translateX(400px) translateY(100px);}
-    100%{transform: translateX(0px);}
+@keyframes circleAnimation {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(400px) translateY(100px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
 }
 
-@keyframes circleAnimation2{
-    0%{transform: translateX(0px);}
-    50%{transform: translateX(-400px) translateY(-100px);}
-    100%{transform: translateX(0px);}
+@keyframes circleAnimation2 {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-400px) translateY(-100px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
 }
 
-@keyframes circleAnimation3{
-    0%{transform: translateX(0px);}
-    50%{transform: translateX(-200px) translateY(-200px);}
-    100%{transform: translateX(0px);}
+@keyframes circleAnimation3 {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-200px) translateY(-200px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
 }
 
-.circle{
+.circle {
     width: 1000px;
     height: 1000px;
     border-radius: 400px;
@@ -63,7 +89,7 @@
     animation-iteration-count: infinite;
 }
 
-.circle2{
+.circle2 {
     position: absolute;
     width: 200px;
     height: 200px;
@@ -75,7 +101,7 @@
     animation-iteration-count: infinite;
 }
 
-.circle3{
+.circle3 {
     position: absolute;
     width: 400px;
     height: 400px;
@@ -87,7 +113,7 @@
     animation-iteration-count: infinite;
 }
 
-.circle4{
+.circle4 {
     position: absolute;
     width: 800px;
     height: 800px;
@@ -97,4 +123,218 @@
     animation-name: circleAnimation3;
     animation-duration: 10s;
     animation-iteration-count: infinite;
+}
+
+.applicationsContainer {
+    h1 {
+        margin-bottom: 10px;
+    }
+}
+
+.trackerButtonsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.trackerButtonsInnerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+    width: 95%;
+    background-color: rgba(217, 217, 217, 0.25);
+    border-radius: 36px;
+    margin: 20px 0 20px 0;
+    /* border: 1px solid blue; */
+}
+
+.trackerButtons {
+    height: 75px;
+    width: 100%;
+    font-size: 28px;
+    text-align: center;
+    text-wrap: pretty;
+
+    &:nth-child(1) {
+        background-color: green;
+        border: none;
+
+        &:hover {
+            background-color: rgb(0, 151, 0);
+        }
+
+        &:active {
+            background-color: rgb(0, 111, 0);
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .trackerButtons {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .trackerButtons {
+        font-size: 16px;
+        height: 80px;
+    }
+}
+
+.tableButtonsContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 10px;
+    /* border: 1px solid red; */
+    /* justify-content: space-around; */
+}
+
+.tableButtonsInnerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 85%;
+    /* border: 1px solid blue; */
+    margin-bottom: 10px;
+
+    button {
+        border: 1px solid white;
+        border-radius: 6px;
+        font-size: 24px;
+        font-weight: bold;
+        width: 225px;
+        background-color: white;
+        color: black;
+        transition: background 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            background: none;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+
+.tableButtonsInnerContainer2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 15%;
+    /* border: 1px solid yellow; */
+    select {
+        font-size: 24px;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        &:hover{
+            background: none;
+            color: white;
+            cursor: pointer;
+        }
+        option{
+            color: black;
+        }
+    }
+}
+
+/* Show the table buttons as a selection box based on how wide the device's width is */
+.tableButtonsSelection{
+    display: none;
+    select {
+        font-size: 24px;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        &:hover{
+            background: none;
+            color: white;
+            cursor: pointer;
+        }
+        option{
+            color: black;
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    .tableButtonsInnerContainer {
+        button {
+            font-size: 18px;
+            width: 200px;
+            height: 25px;
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    /* .tableButtonsInnerContainer {
+        button {
+            font-size: 16px;
+            width: 150px;
+            height: 50px;
+        }
+    } */
+
+    .tableButtonsInnerContainer {
+        display: none;
+    }
+
+    .tableButtonsSelection{
+        display: block;
+    }
+
+    .tableButtonsContainer {
+        /* border: 1px solid white; */
+        /* width: 75%; */
+        flex-direction: row;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+    /* .tableButtonsInnerContainer {
+        width: 100%;
+        button{
+            font-size: 14px;
+            width: 100px;
+            text-wrap: balance;
+        }
+    } */
+
+    /* .tableButtonsContainer {
+        width: 90%;
+    } */
+
+    .tableButtonsInnerContainer2 {
+        flex-direction: row;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .tableButtonsContainer{
+        flex-direction: column;
+        &div{
+            margin-bottom: 10px;
+        }
+    }
+    /* .tableButtonsInnerContainer {
+        width: 100%;
+        button{
+            width: 75px;
+            font-size: 12px;
+            text-wrap: balance;
+        }
+    } */
 }

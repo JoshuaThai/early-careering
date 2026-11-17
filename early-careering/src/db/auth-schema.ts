@@ -7,6 +7,7 @@ import {
   boolean,
   index,
   uniqueIndex,
+  decimal,
 } from "drizzle-orm/mysql-core";
 
 export const user = mysqlTable("user", {
@@ -19,6 +20,27 @@ export const user = mysqlTable("user", {
   careerJourney: varchar("career_journey", { length: 255 }),
   industry: varchar("industry", { length: 255 }),
   
+  createdAt: timestamp("created_at", { fsp: 3 }).defaultNow().notNull(),
+  updatedAt: timestamp("updated_at", { fsp: 3 })
+    .defaultNow()
+    .$onUpdate(() => /* @__PURE__ */ new Date())
+    .notNull(),
+});
+
+export const application = mysqlTable("application",{
+  id: varchar("id", {length: 36}).primaryKey(),
+  userId: varchar("user_id", {length: 36}).notNull()
+  .references(() => user.id, {onDelete: "cascade"}),
+  // We will use the logoTitle if user decides to save a logo via logo.dev
+  logoTitle: varchar("logo_title", {length: 128}),
+
+  title: varchar("title", {length: 64}).notNull(),
+  description: varchar("description", {length: 2000}),
+  minimumSalary: decimal('minimum_salary',{precision: 15, scale: 2}),
+  maximumSalary: decimal('maximum_salary',{precision: 15, scale: 2}),
+  location: varchar("location", {length: 128}),
+  locationType: varchar("location_type", {length: 12}),
+  employmentType: varchar("employment_type", {length: 16}),
   createdAt: timestamp("created_at", { fsp: 3 }).defaultNow().notNull(),
   updatedAt: timestamp("updated_at", { fsp: 3 })
     .defaultNow()

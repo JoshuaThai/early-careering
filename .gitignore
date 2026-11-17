@@ -7,3 +7,12 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 /test-results/
+
+# Ignore all VS Code project-specific settings by default
+.vscode/*
+
+# EXCEPT for these shared configuration files:
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

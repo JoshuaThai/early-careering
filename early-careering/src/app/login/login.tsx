@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { use, useState } from "react";
 import { signIn } from "@/lib/sign-in";
 import { SignUpBox, SignUpSwitch } from "./signUp";
+import { useRouter } from "next/navigation";
 import { redirect } from "next/navigation";
 
 export function LoginBox(){
@@ -26,6 +27,8 @@ function LoginForm(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+
+    const router = useRouter();
     const handleLogin = async() =>{
         await authClient.signIn.email(
         {
@@ -42,7 +45,7 @@ function LoginForm(){
             },
             onSuccess: () => {
             // Route user to dashboard
-            redirect("/dashboard");
+            router.replace("/dashboard");
             }
         }
 );

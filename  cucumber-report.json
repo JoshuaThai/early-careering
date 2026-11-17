@@ -1,18 +1,18 @@
 [
   {
-    "description": "Description: Contains smoke and regression tests for Features Page",
+    "description": "Description: Checking if user can access dashboard page, view all relevant buttons,\nand navigate to the other corresponding pages.",
     "elements": [
       {
         "description": "",
-        "id": "features-page-tests;verify-if-features-page-loads-all-information",
+        "id": "dashboard-page;verify-that-user-can-sign-up-with-test-account-and-access-dashboard",
         "keyword": "Scenario",
-        "line": 12,
-        "name": "Verify if Features Page Loads All Information",
+        "line": 6,
+        "name": "Verify that user can sign up with test account and access dashboard",
         "steps": [
           {
             "result": {
               "status": "passed",
-              "duration": 124012099
+              "duration": 99819600
             },
             "keyword": "Before",
             "hidden": true
@@ -20,7 +20,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 249899
+              "duration": 274600
             },
             "keyword": "Before",
             "hidden": true
@@ -28,7 +28,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 298399
+              "duration": 304000
             },
             "keyword": "Before",
             "hidden": true
@@ -36,7 +36,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 213499
+              "duration": 212999
             },
             "keyword": "Before",
             "hidden": true
@@ -44,59 +44,96 @@
           {
             "result": {
               "status": "passed",
-              "duration": 948849699
+              "duration": 341199
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 390499
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 299999
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 258611499
             },
             "arguments": [],
             "keyword": "Given ",
-            "line": 13,
-            "name": "the user is on the Features page",
+            "line": 7,
+            "name": "the user navigates to the login page",
             "match": {
-              "location": "src\\steps\\features.steps.ts:11"
+              "location": "src\\steps\\login.steps.ts:15"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 70661099
+              "duration": 141695700
             },
             "arguments": [],
             "keyword": "When ",
-            "line": 14,
-            "name": "the Features page loads",
+            "line": 8,
+            "name": "the user clicks the sign up switch",
             "match": {
-              "location": "src\\steps\\features.steps.ts:15"
+              "location": "src\\steps\\signup.steps.ts:23"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 55954099
+              "duration": 259436499
             },
             "arguments": [],
             "keyword": "Then ",
-            "line": 15,
-            "name": "the user verifies that the EarlyCareering's Facts is fully loaded",
+            "line": 9,
+            "name": "the user enters the test account information",
             "match": {
-              "location": "src\\steps\\features.steps.ts:31"
+              "location": "src\\steps\\dashboard.steps.ts:18"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 24089399
+              "duration": 1267241199
             },
             "arguments": [],
             "keyword": "And ",
-            "line": 16,
-            "name": "the user verifies that the Other App's Facts is fully loaded",
+            "line": 10,
+            "name": "the user clicks the \"sign up\" button",
             "match": {
-              "location": "src\\steps\\features.steps.ts:41"
+              "location": "src\\steps\\signup.steps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2907397399
+              "duration": 12262800
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "the user should be on the \"dashboard\" page",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:123"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 149718000
             },
             "keyword": "After",
             "hidden": true
@@ -104,23 +141,23 @@
         ],
         "tags": [
           {
-            "name": "@regression",
-            "line": 11
+            "name": "@smoke",
+            "line": 5
           }
         ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "features-page-tests;verify-if-call-to-action-in-features-page-works",
+        "id": "dashboard-page;verify-that-nav-bar-displays-only-three-links-(dashboard,-contact,-faqs)",
         "keyword": "Scenario",
-        "line": 19,
-        "name": "Verify if Call to Action in Features Page works",
+        "line": 14,
+        "name": "Verify that nav bar displays only three links (Dashboard, Contact, FAQs)",
         "steps": [
           {
             "result": {
               "status": "passed",
-              "duration": 139333399
+              "duration": 65501700
             },
             "keyword": "Before",
             "hidden": true
@@ -128,7 +165,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 203800
+              "duration": 67299
             },
             "keyword": "Before",
             "hidden": true
@@ -136,7 +173,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 324800
+              "duration": 48100
             },
             "keyword": "Before",
             "hidden": true
@@ -144,7 +181,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 222600
+              "duration": 30799
             },
             "keyword": "Before",
             "hidden": true
@@ -152,46 +189,83 @@
           {
             "result": {
               "status": "passed",
-              "duration": 932154200
+              "duration": 50499
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 33900
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 31199
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 282041800
             },
             "arguments": [],
             "keyword": "Given ",
-            "line": 20,
-            "name": "the user is on the Features page",
+            "line": 15,
+            "name": "the user navigates to the login page",
             "match": {
-              "location": "src\\steps\\features.steps.ts:11"
+              "location": "src\\steps\\login.steps.ts:15"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 68640400
+              "duration": 189783100
             },
             "arguments": [],
             "keyword": "When ",
-            "line": 21,
-            "name": "the Features page loads",
+            "line": 16,
+            "name": "the user signs into the test account",
             "match": {
-              "location": "src\\steps\\features.steps.ts:15"
+              "location": "src\\steps\\dashboard.steps.ts:31"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2772554699
+              "duration": 827782499
             },
             "arguments": [],
             "keyword": "Then ",
-            "line": 22,
-            "name": "the user verifies that the Call to Action in Features page redirects to login page",
+            "line": 17,
+            "name": "the user should be on the \"dashboard\" page",
             "match": {
-              "location": "src\\steps\\features.steps.ts:51"
+              "location": "src\\steps\\home.steps.ts:123"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 218336300
+              "duration": 17396399
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "the user verifies that all three nav bar links can be seen in dashboard page",
+            "match": {
+              "location": "src\\steps\\dashboard.steps.ts:40"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 124697299
             },
             "keyword": "After",
             "hidden": true
@@ -199,18 +273,676 @@
         ],
         "tags": [
           {
-            "name": "@regression",
-            "line": 18
+            "name": "@smoke",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dashboard-page;verify-that-nav-bar-includes-a-profile-button-that-when-hovered-over-displays-three-more-links-(your-profile,-terms-and-conditions,-log-out)",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Verify that nav bar includes a profile button that when hovered over displays three more links (Your Profile, Terms and Conditions, Log Out)",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 67171199
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 60100
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 33999
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 21800
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 67199
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 35499
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 28700
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 322357000
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "the user navigates to the login page",
+            "match": {
+              "location": "src\\steps\\login.steps.ts:15"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 168505300
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "the user signs into the test account",
+            "match": {
+              "location": "src\\steps\\dashboard.steps.ts:31"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 815450500
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "the user should be on the \"dashboard\" page",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:123"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 66942800
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "the user verifies that the nav bar has a profile button",
+            "match": {
+              "location": "src\\steps\\dashboard.steps.ts:46"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 16413599
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "the user verifies that the profile button includes three links",
+            "match": {
+              "location": "src\\steps\\dashboard.steps.ts:51"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 114618500
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 20
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dashboard-page;verify-that-user-is-always-redirected-to-dashboard-page-when-trying-to-access-homepage-from-footer",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Verify that user is always redirected to dashboard page when trying to access homepage from footer",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 54148900
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 59900
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 31300
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 23499
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 41300
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 30300
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 28000
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 234934199
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "the user navigates to the login page",
+            "match": {
+              "location": "src\\steps\\login.steps.ts:15"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 160024400
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "the user signs into the test account",
+            "match": {
+              "location": "src\\steps\\dashboard.steps.ts:31"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 818185600
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "the user should be on the \"dashboard\" page",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:123"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1417599
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "the user should see a \"home\" link in the footer",
+            "match": {
+              "location": "src\\steps\\dashboard.steps.ts:58"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1189800
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "the user clicks \"home\" in footer",
+            "match": {
+              "location": "src\\steps\\dashboard.steps.ts:64"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 8652399
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 35,
+            "name": "the user should be on the \"dashboard\" page",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:123"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 122869499
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 28
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dashboard-page;verify-that-in-small-screens,-a-modal-window-that-displays-the-same-three-links-as-nav-bar-and-a-button-with-the-user's-name",
+        "keyword": "Scenario",
+        "line": 38,
+        "name": "Verify that in small screens, a modal window that displays the same three links as nav bar and a button with the user's name",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 70302400
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 77799
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 25499
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 20099
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 37599
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 28599
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 27300
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 276778800
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 39,
+            "name": "the user navigates to the login page",
+            "match": {
+              "location": "src\\steps\\login.steps.ts:15"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 199736199
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "the user signs into the test account",
+            "match": {
+              "location": "src\\steps\\dashboard.steps.ts:31"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 848440500
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "the user should be on the \"dashboard\" page",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:123"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 4810900
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "the user reduces the window size to \"800\" by \"600\"",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 39494999
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "the user clicks the \"menu\" button",
+            "match": {
+              "location": "src\\steps\\signup.steps.ts:58"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 12510599
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "the user verifies that they see \"three links\" in the logged in modal",
+            "match": {
+              "location": "src\\steps\\dashboard.steps.ts:70"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 4612900
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 45,
+            "name": "the user verifies that they also see a button with the user's name",
+            "match": {
+              "location": "src\\steps\\dashboard.steps.ts:83"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 113267500
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 37
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dashboard-page;verify-that-in-small-screens,-a-modal-window-contains-a-button-with-the-user's-name-that-when-clicked,-it-will-display-three-more-links-(your-profile,-terms-and-conditions,-log-out)",
+        "keyword": "Scenario",
+        "line": 48,
+        "name": "Verify that in small screens, a modal window contains a button with the user's name that when clicked, it will display three more links (Your Profile, Terms and Conditions, Log Out)",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 53788999
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 50699
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 21300
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 15699
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 14999
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 16999
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 16499
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 298333899
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 49,
+            "name": "the user navigates to the login page",
+            "match": {
+              "location": "src\\steps\\login.steps.ts:15"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 152613600
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 50,
+            "name": "the user signs into the test account",
+            "match": {
+              "location": "src\\steps\\dashboard.steps.ts:31"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 822126699
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 51,
+            "name": "the user should be on the \"dashboard\" page",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:123"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 5296200
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "the user reduces the window size to \"800\" by \"600\"",
+            "match": {
+              "location": "src\\steps\\home.steps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 54191600
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "the user clicks the \"menu\" button",
+            "match": {
+              "location": "src\\steps\\signup.steps.ts:58"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3038799
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "the user verifies that they also see a button with the user's name",
+            "match": {
+              "location": "src\\steps\\dashboard.steps.ts:83"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 49710999
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "the user clicks the button with the user's name",
+            "match": {
+              "location": "src\\steps\\dashboard.steps.ts:87"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 13365799
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 56,
+            "name": "the user verifies that they see \"three more links\" in the logged in modal",
+            "match": {
+              "location": "src\\steps\\dashboard.steps.ts:70"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 129170500
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 47
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "features-page-tests",
+    "id": "dashboard-page",
     "line": 1,
     "keyword": "Feature",
-    "name": "Features Page Tests",
+    "name": "Dashboard Page",
     "tags": [],
-    "uri": "src\\features\\features.feature"
+    "uri": "src\\features\\dashboard.feature"
   }
 ]

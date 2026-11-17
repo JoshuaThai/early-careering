@@ -1,0 +1,28 @@
+/* CSS file stores dashboard elements that do not necessarily need classes or ids. */
+table{
+    border: 1px solid white;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+tr{
+    border-bottom: 1px solid white;
+}
+th{
+    height: 50px;
+
+    &:first-child{
+        width: 5%;
+    }
+    &:nth-child(4){
+        width: 35%;
+    }
+}
+th, td{
+    border-right: 1px solid white;
+    /* border-bottom: 1px solid white; */
+    &:last-child{
+        border-right: none;
+    }
+}
